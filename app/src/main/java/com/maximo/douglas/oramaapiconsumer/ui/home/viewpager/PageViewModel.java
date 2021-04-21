@@ -1,4 +1,4 @@
-package com.maximo.douglas.oramaapiconsumer.ui.main;
+package com.maximo.douglas.oramaapiconsumer.ui.home.viewpager;
 
 import androidx.arch.core.util.Function;
 import androidx.lifecycle.LiveData;
