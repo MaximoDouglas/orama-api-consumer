@@ -136,6 +136,10 @@ public class Operability {
     @Expose
     private String minimumSubsequentApplicationAmount;
 
+    public Operability(String minimumInitialApplicationAmount) {
+        this.minimumInitialApplicationAmount = minimumInitialApplicationAmount;
+    }
+
     public Boolean getHasOperationsOnThursdays() {
         return hasOperationsOnThursdays;
     }

@@ -3,6 +3,7 @@ package com.maximo.douglas.oramaapiconsumer.domain.entity.fund;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 import com.maximo.douglas.oramaapiconsumer.domain.entity.fund.specification.Specification;
+import com.maximo.douglas.oramaapiconsumer.utils.MathUtils;
 
 import java.util.ArrayList;
 import java.util.Date;
@@ -90,7 +91,7 @@ public class Fund {
 
     @SerializedName("volatility_12m")
     @Expose
-    private String volatility12M;
+    private String volatility12m;
 
     @SerializedName("strategy_video")
     @Expose
@@ -115,6 +116,12 @@ public class Fund {
     @SerializedName("esg_seal")
     @Expose
     private String esgSeal;
+
+    public Fund(String simpleName, Operability operability, String volatility12m) {
+        this.simpleName = simpleName;
+        this.operability = operability;
+        this.volatility12m = volatility12m;
+    }
 
     public Integer getId() {
         return id;
@@ -196,8 +203,14 @@ public class Fund {
         return fundSituation;
     }
 
-    public String getVolatility12M() {
-        return volatility12M;
+    public String getVolatility12m() {
+        return volatility12m;
+    }
+
+    public String getFormattedVolatility12m() {
+        double volatilityDouble = Double.parseDouble(volatility12m) * 100;
+
+        return String.valueOf(MathUtils.round(volatilityDouble, 2));
     }
 
     public String getStrategyVideo() {
