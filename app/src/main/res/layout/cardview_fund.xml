@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="fund"
+            type="com.maximo.douglas.oramaapiconsumer.domain.entity.fund.Fund" />
+    </data>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/fund_cardview"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_margin="8dp"
+        android:elevation="20dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/colored_label_image_view"
+                android:layout_width="8dp"
+                android:layout_height="match_parent"
+                tools:background="?attr/colorAccent" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/fund_simple_name_text_view"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="0.5"
+                    android:text="@{fund.simpleName}"
+                    android:textAlignment="center"
+                    android:textColor="?attr/colorSecondary"
+                    android:textStyle="bold"
+                    tools:text="Meta Plus FIM" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_weight="0.5"
+                    android:orientation="vertical"
+                    android:padding="8dp">
+
+                    <TextView
+                        android:id="@+id/fund_volatility_12m_text_view"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:text='@{fund.formattedVolatility12m + "% (12m)"}'
+                        android:textColor="?attr/colorPrimaryDark"
+                        tools:text="10,35% (12m)" />
+
+                    <TextView
+                        android:id="@+id/fund_minimum_application_amount_label_text_view"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="8dp"
+                        android:text="@string/minimum_initial_application_amount"
+                        android:textColor="?attr/colorPrimaryDark"
+                        tools:text="Aplicação mínima" />
+
+                    <TextView
+                        android:id="@+id/fund_minimum_application_amount_text_view"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:text='@{"R$ " + fund.operability.minimumInitialApplicationAmount}'
+                        android:textColor="?attr/colorPrimaryDark"
+                        tools:text="R$ 5.000,00" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+</layout>
