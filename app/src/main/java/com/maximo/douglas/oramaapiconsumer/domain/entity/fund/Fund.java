@@ -15,7 +15,7 @@ public class Fund {
 
     @SerializedName("fees")
     @Expose
-    private ArrayList<Fee> fees;
+    private Fee fees;
 
     @SerializedName("is_simple")
     @Expose
@@ -93,10 +93,6 @@ public class Fund {
     @Expose
     private String volatility12m;
 
-    @SerializedName("strategy_video")
-    @Expose
-    private String strategyVideo;
-
     @SerializedName("profitabilities")
     @Expose
     private Profitabilities profitabilities;
@@ -127,7 +123,7 @@ public class Fund {
         return id;
     }
 
-    public ArrayList<Fee> getFees() {
+    public Fee getFees() {
         return fees;
     }
 
@@ -211,10 +207,6 @@ public class Fund {
         double volatilityDouble = Double.parseDouble(volatility12m) * 100;
 
         return String.valueOf(MathUtils.round(volatilityDouble, 2));
-    }
-
-    public String getStrategyVideo() {
-        return strategyVideo;
     }
 
     public Profitabilities getProfitabilities() {
