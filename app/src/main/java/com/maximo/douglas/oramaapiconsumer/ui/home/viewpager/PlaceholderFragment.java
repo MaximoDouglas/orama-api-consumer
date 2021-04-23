@@ -40,6 +40,7 @@ public class PlaceholderFragment extends Fragment {
             index = getArguments().getInt(ARG_SECTION_NUMBER);
         }
         pageViewModel.setIndex(index);
+        pageViewModel.requestFundList();
     }
 
     @Override
@@ -52,6 +53,10 @@ public class PlaceholderFragment extends Fragment {
             public void onChanged(@Nullable String s) {
                 textView.setText(s);
             }
+        });
+
+        pageViewModel.getFundListLiveData().observe(this, fundList -> {
+            System.out.println("FUND LIST SIZE" + fundList.size());
         });
 
         return root;
