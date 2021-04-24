@@ -22,10 +22,6 @@ public class Fund implements Serializable {
     @Expose
     private Boolean isSimple;
 
-    @SerializedName("description_seo")
-    @Expose
-    private String descriptionSeo;
-
     @SerializedName("operability")
     @Expose
     private Operability operability;
@@ -33,10 +29,6 @@ public class Fund implements Serializable {
     @SerializedName("full_name")
     @Expose
     private String fullName;
-
-    @SerializedName("opening_date")
-    @Expose
-    private Date openingDate;
 
     @SerializedName("is_closed")
     @Expose
@@ -62,10 +54,6 @@ public class Fund implements Serializable {
     @Expose
     private String taxClassification;
 
-    @SerializedName("cnpj")
-    @Expose
-    private String cnpj;
-
     @SerializedName("description")
     @Expose
     private Description description;
@@ -73,18 +61,6 @@ public class Fund implements Serializable {
     @SerializedName("is_active")
     @Expose
     private Boolean isActive;
-
-    @SerializedName("benchmark")
-    @Expose
-    private Benchmark benchmark;
-
-    @SerializedName("orama_standard")
-    @Expose
-    private Boolean oramaStandard;
-
-    @SerializedName("slug")
-    @Expose
-    private String slug;
 
     @SerializedName("fund_situation")
     @Expose
@@ -98,10 +74,6 @@ public class Fund implements Serializable {
     @Expose
     private Profitabilities profitabilities;
 
-    @SerializedName("closed_to_capture_explanation")
-    @Expose
-    private String closedToCaptureExplanation;
-
     @SerializedName("net_patrimony_12m")
     @Expose
     private String netPatrimony12M;
@@ -109,16 +81,6 @@ public class Fund implements Serializable {
     @SerializedName("fund_manager")
     @Expose
     private FundManager fundManager;
-
-    @SerializedName("esg_seal")
-    @Expose
-    private String esgSeal;
-
-    public Fund(String simpleName, Operability operability, String volatility12m) {
-        this.simpleName = simpleName;
-        this.operability = operability;
-        this.volatility12m = volatility12m;
-    }
 
     public Integer getId() {
         return id;
@@ -128,12 +90,8 @@ public class Fund implements Serializable {
         return fees;
     }
 
-    public Boolean getSimple() {
+    public Boolean getIsSimple() {
         return isSimple;
-    }
-
-    public String getDescriptionSeo() {
-        return descriptionSeo;
     }
 
     public Operability getOperability() {
@@ -142,10 +100,6 @@ public class Fund implements Serializable {
 
     public String getFullName() {
         return fullName;
-    }
-
-    public Date getOpeningDate() {
-        return openingDate;
     }
 
     public Boolean getClosed() {
@@ -172,28 +126,12 @@ public class Fund implements Serializable {
         return taxClassification;
     }
 
-    public String getCnpj() {
-        return cnpj;
-    }
-
     public Description getDescription() {
         return description;
     }
 
     public Boolean getActive() {
         return isActive;
-    }
-
-    public Benchmark getBenchmark() {
-        return benchmark;
-    }
-
-    public Boolean getOramaStandard() {
-        return oramaStandard;
-    }
-
-    public String getSlug() {
-        return slug;
     }
 
     public FundSituation getFundSituation() {
@@ -205,17 +143,19 @@ public class Fund implements Serializable {
     }
 
     public String getFormattedVolatility12m() {
-        double volatilityDouble = Double.parseDouble(volatility12m) * 100;
+        String resultString = "0.00%";
 
-        return String.valueOf(MathUtils.round(volatilityDouble, 2));
+        if (volatility12m != null) {
+            double volatilityDouble = Double.parseDouble(volatility12m) * 100;
+
+            resultString = String.valueOf(MathUtils.round(volatilityDouble, 2));
+        }
+
+        return resultString;
     }
 
     public Profitabilities getProfitabilities() {
         return profitabilities;
-    }
-
-    public String getClosedToCaptureExplanation() {
-        return closedToCaptureExplanation;
     }
 
     public String getNetPatrimony12M() {
@@ -224,10 +164,6 @@ public class Fund implements Serializable {
 
     public FundManager getFundManager() {
         return fundManager;
-    }
-
-    public String getEsgSeal() {
-        return esgSeal;
     }
 
 }

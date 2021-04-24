@@ -4,5 +4,6 @@
     <color name="teal_500">#009688</color>
     <color name="black">#FF000000</color>
     <color name="gray">#C8C8C8</color>
+    <color name="red">#ff0000</color>
     <color name="white">#FFFFFFFF</color>
 </resources>

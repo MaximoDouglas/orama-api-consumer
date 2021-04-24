@@ -25,10 +25,21 @@
             android:orientation="horizontal">
 
             <ImageView
-                android:id="@+id/colored_label_image_view"
+                android:id="@+id/teal_label"
+                visibleOrGone="@{fund.isSimple}"
                 android:layout_width="8dp"
                 android:layout_height="match_parent"
-                tools:background="?attr/colorAccent" />
+                android:background="@color/teal_500"
+                tools:background="@color/teal_500" />
+
+            <ImageView
+                android:id="@+id/red_label"
+                visibleOrGone="@{!fund.isSimple}"
+                android:layout_width="8dp"
+                android:layout_height="match_parent"
+                android:background="@color/red"
+                tools:background="@color/red"
+                tools:visibility="gone" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -41,6 +52,8 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:layout_weight="0.5"
+                    android:paddingStart="8dp"
+                    android:paddingEnd="8dp"
                     android:text="@{fund.simpleName}"
                     android:textAlignment="center"
                     android:textColor="?attr/colorSecondary"

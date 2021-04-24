@@ -45,6 +45,7 @@ public class FundListingAdapter extends RecyclerView.Adapter<FundListingAdapter.
     @Override
     public void onBindViewHolder(@NonNull FundViewHolder fundViewHolder, int position) {
         Fund currentFund = fundList.get(position);
+
         fundViewHolder.cardviewFundBinding.setFund(currentFund);
     }
 
