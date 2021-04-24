@@ -5,13 +5,13 @@ import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentPagerAdapter;
 
 import com.maximo.douglas.oramaapiconsumer.ui.home.viewpager.fundlisting.FundListingFragment;
-import com.maximo.douglas.oramaapiconsumer.ui.home.viewpager.temp.TempFragment;
+import com.maximo.douglas.oramaapiconsumer.ui.home.viewpager.temp.FundDetailFragment;
 
 public class SectionsPagerAdapter extends FragmentPagerAdapter {
 
     private static final Fragment[] fragmentList = {
             FundListingFragment.newInstance(),
-            TempFragment.newInstance(1)
+            FundDetailFragment.newInstance()
     };
 
     public SectionsPagerAdapter(FragmentManager fragmentManager) {

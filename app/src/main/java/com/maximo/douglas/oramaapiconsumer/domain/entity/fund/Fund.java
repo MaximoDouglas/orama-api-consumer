@@ -5,10 +5,11 @@ import com.google.gson.annotations.SerializedName;
 import com.maximo.douglas.oramaapiconsumer.domain.entity.fund.specification.Specification;
 import com.maximo.douglas.oramaapiconsumer.utils.MathUtils;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Date;
 
-public class Fund {
+public class Fund implements Serializable {
     @SerializedName("id")
     @Expose
     private Integer id;
@@ -228,4 +229,5 @@ public class Fund {
     public String getEsgSeal() {
         return esgSeal;
     }
+
 }
