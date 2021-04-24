@@ -1,4 +1,4 @@
-package com.maximo.douglas.oramaapiconsumer.ui.home.viewpager;
+package com.maximo.douglas.oramaapiconsumer.ui.home.viewpager.temp;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -14,17 +14,14 @@ import androidx.lifecycle.ViewModelProvider;
 
 import com.maximo.douglas.oramaapiconsumer.R;
 
-/**
- * A placeholder fragment containing a simple view.
- */
-public class PlaceholderFragment extends Fragment {
+public class TempFragment extends Fragment {
 
     private static final String ARG_SECTION_NUMBER = "section_number";
 
-    private PageViewModel pageViewModel;
+    private TempViewModel tempViewModel;
 
-    public static PlaceholderFragment newInstance(int index) {
-        PlaceholderFragment fragment = new PlaceholderFragment();
+    public static TempFragment newInstance(int index) {
+        TempFragment fragment = new TempFragment();
         Bundle bundle = new Bundle();
         bundle.putInt(ARG_SECTION_NUMBER, index);
         fragment.setArguments(bundle);
@@ -34,13 +31,12 @@ public class PlaceholderFragment extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        pageViewModel = new ViewModelProvider(this).get(PageViewModel.class);
+        tempViewModel = new ViewModelProvider(this).get(TempViewModel.class);
         int index = 1;
         if (getArguments() != null) {
             index = getArguments().getInt(ARG_SECTION_NUMBER);
         }
-        pageViewModel.setIndex(index);
-        pageViewModel.requestFundList();
+        tempViewModel.setIndex(index);
     }
 
     @Override
@@ -48,15 +44,11 @@ public class PlaceholderFragment extends Fragment {
         View root = inflater.inflate(R.layout.fragment_placeholder, container, false);
         final TextView textView = root.findViewById(R.id.section_label);
 
-        pageViewModel.getText().observe(this, new Observer<String>() {
+        tempViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
             @Override
             public void onChanged(@Nullable String s) {
                 textView.setText(s);
             }
-        });
-
-        pageViewModel.getFundListLiveData().observe(this, fundList -> {
-            System.out.println("FUND LIST SIZE" + fundList.size());
         });
 
         return root;
