@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
@@ -13,8 +14,10 @@
         android:id="@+id/fund_cardview"
         android:layout_width="match_parent"
         android:layout_height="100dp"
-        android:layout_margin="8dp"
-        android:elevation="20dp">
+        android:layout_margin="6dp"
+        app:cardCornerRadius="6dp"
+        app:strokeColor="@color/gray"
+        app:strokeWidth="1dp">
 
         <LinearLayout
             android:layout_width="match_parent"
