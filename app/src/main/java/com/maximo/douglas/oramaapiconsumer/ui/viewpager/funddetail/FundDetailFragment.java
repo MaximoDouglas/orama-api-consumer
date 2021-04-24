@@ -1,4 +1,4 @@
-package com.maximo.douglas.oramaapiconsumer.ui.home.viewpager.temp;
+package com.maximo.douglas.oramaapiconsumer.ui.viewpager.funddetail;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -25,14 +25,15 @@ public class FundDetailFragment extends Fragment {
     private FundDetailViewModel fundDetailViewModel;
     private FragmentFundDetailBinding mBinding;
 
-    public static FundDetailFragment newInstance() {
-        return new FundDetailFragment();
-    }
-
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         mBinding = DataBindingUtil.inflate(inflater, R.layout.fragment_fund_detail, container, false);
         return mBinding.getRoot();
+    }
+
+    @Override
+    public void onActivityCreated(@Nullable Bundle savedInstanceState) {
+        super.onActivityCreated(savedInstanceState);
     }
 
     @Override
@@ -52,13 +53,13 @@ public class FundDetailFragment extends Fragment {
 
         if (bundleContainsKeys) {
             Fund fundDetail = savedInstanceState.getParcelable(NavigationArgumentKeys.KEY_FUND_DETAIL.value);
-            fundDetailViewModel.setFundRemoteDataSource(fundDetail);
+            fundDetailViewModel.setFundDetail(fundDetail);
         }
     }
 
     private void extractDataFromArguments(@NotNull Bundle arguments) {
         Fund fundDetail = FundDetailFragmentArgs.fromBundle(arguments).getFund();
-        fundDetailViewModel.setFundRemoteDataSource(fundDetail);
+        fundDetailViewModel.setFundDetail(fundDetail);
     }
 
     private void setupViewModel() {
@@ -66,11 +67,11 @@ public class FundDetailFragment extends Fragment {
             fundDetailViewModel = new ViewModelProvider(this).get(FundDetailViewModel.class);
         }
 
-        fundDetailViewModel.getFundDetailLiveData().observe(getViewLifecycleOwner(), this::handleFundListStateChange);
+        fundDetailViewModel.getFundDetailLiveData().observe(getViewLifecycleOwner(), this::handleFundDetailStateChange);
     }
 
-    private void handleFundListStateChange(Fund fund) {
-
+    private void handleFundDetailStateChange(Fund fund) {
+        mBinding.fundNameTextView.setText(fund.getFullName());
     }
 
 }

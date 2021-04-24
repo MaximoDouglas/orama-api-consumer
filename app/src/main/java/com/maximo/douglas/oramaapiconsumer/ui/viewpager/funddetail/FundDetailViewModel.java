@@ -1,4 +1,4 @@
-package com.maximo.douglas.oramaapiconsumer.ui.home.viewpager.temp;
+package com.maximo.douglas.oramaapiconsumer.ui.viewpager.funddetail;
 
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
@@ -15,7 +15,7 @@ public class FundDetailViewModel extends ViewModel {
         return mFundDetail;
     }
 
-    public void setFundRemoteDataSource(Fund fund) {
+    public void setFundDetail(Fund fund) {
         mMutableFundDetail.setValue(fund);
     }
 
