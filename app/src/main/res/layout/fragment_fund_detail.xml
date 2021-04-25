@@ -152,6 +152,62 @@
                 <include
                     android:id="@+id/fund_specification"
                     layout="@layout/layout_fund_specification" />
+
+                <LinearLayout
+                    visibleOrGone="@{fund.description != null}"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="@string/fund_objective"
+                        android:textColor="@color/teal_500"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="6dp"
+                        android:text="@{fund.description.objective}"
+                        android:textColor="@color/gray_700"
+                        android:textSize="14sp"
+                        tools:text="-0.001257" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    visibleOrGone="@{fund.fundManager != null}"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text='@{"Sobre a administradora " + fund.fundManager.name}'
+                        android:textColor="@color/teal_500"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        tools:text="Sobre a administradora PIMCO" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="6dp"
+                        android:text="@{fund.fundManager.description}"
+                        android:textColor="@color/gray_700"
+                        android:textSize="14sp"
+                        tools:text="-0.001257" />
+
+                </LinearLayout>
+
             </LinearLayout>
         </ScrollView>
     </LinearLayout>

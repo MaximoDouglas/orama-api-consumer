@@ -14,5 +14,14 @@
     <string name="fund_suitable_profile">Perfil adequado:</string>
     <string name="fund_class">Classe do fundo:</string>
     <string name="fund_class_anbima">Anbima da classe:</string>
+    <string name="fund_objective">Objetivo do fundo</string>
+    <string name="fund_profitability_today_label">Hoje:</string>
+    <string name="fund_profitability_this_month_label">Este mês:</string>
+    <string name="fund_profitability_this_year_label">Este ano:</string>
+    <string name="fund_profitability_last_twelve_months_label">Últimos 12 meses:</string>
+    <string name="fund_profitability_last_two_years_label">Últimos 2 anos:</string>
+    <string name="fund_profitability_last_three_years_label">Últimos 3 anos:</string>
+    <string name="fund_profitability_last_four_years_label">Últimos 4 anos:</string>
+    <string name="fund_profitability_last_five_years_label">Últimos 5 anos:</string>
 
 </resources>

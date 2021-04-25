@@ -3,7 +3,6 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
-
         <variable
             name="profitabilities"
             type="com.maximo.douglas.oramaapiconsumer.domain.entity.fund.Profitabilities" />
@@ -25,7 +24,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Hoje:"
+                android:text="@string/fund_profitability_today_label"
                 android:textColor="@color/green"
                 android:textSize="14sp"
                 android:textStyle="bold" />
@@ -52,7 +51,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Este mês:"
+                android:text="@string/fund_profitability_this_month_label"
                 android:textColor="@color/green"
                 android:textSize="14sp"
                 android:textStyle="bold" />
@@ -78,7 +77,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Este mês:"
+                android:text="@string/fund_profitability_this_year_label"
                 android:textColor="@color/green"
                 android:textSize="14sp"
                 android:textStyle="bold" />
@@ -104,7 +103,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Últimos 12 meses:"
+                android:text="@string/fund_profitability_last_twelve_months_label"
                 android:textColor="@color/green"
                 android:textSize="14sp"
                 android:textStyle="bold" />
@@ -130,7 +129,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Últimos 2 anos:"
+                android:text="@string/fund_profitability_last_two_years_label"
                 android:textColor="@color/green"
                 android:textSize="14sp"
                 android:textStyle="bold" />
@@ -156,7 +155,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Últimos 3 anos:"
+                android:text="@string/fund_profitability_last_three_years_label"
                 android:textColor="@color/green"
                 android:textSize="14sp"
                 android:textStyle="bold" />
@@ -182,7 +181,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Últimos 4 anos:"
+                android:text="@string/fund_profitability_last_four_years_label"
                 android:textColor="@color/green"
                 android:textSize="14sp"
                 android:textStyle="bold" />
@@ -208,7 +207,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Últimos 5 anos:"
+                android:text="@string/fund_profitability_last_five_years_label"
                 android:textColor="@color/green"
                 android:textSize="14sp"
                 android:textStyle="bold" />
