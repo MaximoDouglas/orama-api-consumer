@@ -26,8 +26,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Hoje:"
-                android:textColor="@color/teal_500"
-                android:textSize="16sp"
+                android:textColor="@color/green"
+                android:textSize="14sp"
                 android:textStyle="bold" />
 
             <TextView
@@ -35,7 +35,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="6dp"
                 android:text="@{profitabilities.formattedDay}"
-                android:textColor="@color/black"
+                android:textColor="@color/gray_700"
                 android:textSize="14sp"
                 tools:text="-0.001257" />
 
@@ -53,8 +53,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Este mês:"
-                android:textColor="@color/teal_500"
-                android:textSize="16sp"
+                android:textColor="@color/green"
+                android:textSize="14sp"
                 android:textStyle="bold" />
 
             <TextView
@@ -62,7 +62,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="6dp"
                 android:text="@{profitabilities.formattedMonth}"
-                android:textColor="@color/black"
+                android:textColor="@color/gray_700"
                 android:textSize="14sp"
                 tools:text="-0.001257" />
         </LinearLayout>
@@ -79,8 +79,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Este mês:"
-                android:textColor="@color/teal_500"
-                android:textSize="16sp"
+                android:textColor="@color/green"
+                android:textSize="14sp"
                 android:textStyle="bold" />
 
             <TextView
@@ -88,7 +88,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="6dp"
                 android:text="@{profitabilities.formattedYear}"
-                android:textColor="@color/black"
+                android:textColor="@color/gray_700"
                 android:textSize="14sp"
                 tools:text="-0.001257" />
         </LinearLayout>
@@ -105,8 +105,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Últimos 12 meses:"
-                android:textColor="@color/teal_500"
-                android:textSize="16sp"
+                android:textColor="@color/green"
+                android:textSize="14sp"
                 android:textStyle="bold" />
 
             <TextView
@@ -114,7 +114,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="6dp"
                 android:text="@{profitabilities.formattedM12}"
-                android:textColor="@color/black"
+                android:textColor="@color/gray_700"
                 android:textSize="14sp"
                 tools:text="-0.001257" />
         </LinearLayout>
@@ -131,8 +131,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Últimos 2 anos:"
-                android:textColor="@color/teal_500"
-                android:textSize="16sp"
+                android:textColor="@color/green"
+                android:textSize="14sp"
                 android:textStyle="bold" />
 
             <TextView
@@ -140,7 +140,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="6dp"
                 android:text="@{profitabilities.formattedM24}"
-                android:textColor="@color/black"
+                android:textColor="@color/gray_700"
                 android:textSize="14sp"
                 tools:text="-0.001257" />
         </LinearLayout>
@@ -157,8 +157,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Últimos 3 anos:"
-                android:textColor="@color/teal_500"
-                android:textSize="16sp"
+                android:textColor="@color/green"
+                android:textSize="14sp"
                 android:textStyle="bold" />
 
             <TextView
@@ -166,7 +166,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="6dp"
                 android:text="@{profitabilities.formattedM36}"
-                android:textColor="@color/black"
+                android:textColor="@color/gray_700"
                 android:textSize="14sp"
                 tools:text="-0.001257" />
         </LinearLayout>
@@ -183,8 +183,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Últimos 4 anos:"
-                android:textColor="@color/teal_500"
-                android:textSize="16sp"
+                android:textColor="@color/green"
+                android:textSize="14sp"
                 android:textStyle="bold" />
 
             <TextView
@@ -192,7 +192,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="6dp"
                 android:text="@{profitabilities.formattedM48}"
-                android:textColor="@color/black"
+                android:textColor="@color/gray_700"
                 android:textSize="14sp"
                 tools:text="-0.001257" />
         </LinearLayout>
@@ -209,8 +209,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Últimos 5 anos:"
-                android:textColor="@color/teal_500"
-                android:textSize="16sp"
+                android:textColor="@color/green"
+                android:textSize="14sp"
                 android:textStyle="bold" />
 
             <TextView
@@ -218,7 +218,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="6dp"
                 android:text="@{profitabilities.formattedM60}"
-                android:textColor="@color/black"
+                android:textColor="@color/gray_700"
                 android:textSize="14sp"
                 tools:text="-0.001257" />
         </LinearLayout>

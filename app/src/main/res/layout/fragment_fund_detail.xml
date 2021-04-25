@@ -11,7 +11,8 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
+        android:isScrollContainer="true"
         android:orientation="vertical">
 
         <com.google.android.material.appbar.AppBarLayout
@@ -33,36 +34,125 @@
 
         </com.google.android.material.appbar.AppBarLayout>
 
-        <LinearLayout
+        <ScrollView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="20dp"
-            android:layout_marginEnd="20dp"
-            android:orientation="vertical">
+            android:layout_marginBottom="10dp">
 
-            <ImageView
-                android:id="@+id/fun_manager_logo"
-                imageUrl="@{fund.fundManager.logo}"
+            <LinearLayout
+                android:id="@+id/fund_information"
                 android:layout_width="match_parent"
-                android:layout_height="200dp"
-                android:layout_marginTop="20dp"
-                android:background="@color/gray"
-                android:padding="1dp" />
-
-            <TextView
-                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:text="@string/fund_profitability_label"
-                android:textColor="@color/teal_500"
-                android:textSize="18sp"
-                android:textStyle="bold" />
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:orientation="vertical">
 
-            <include
-                android:id="@+id/fund_profitability"
-                layout="@layout/layout_fund_profitabilities" />
+                <ImageView
+                    android:id="@+id/fun_manager_logo"
+                    imageUrl="@{fund.fundManager.logo}"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:layout_marginTop="20dp"
+                    android:background="@color/gray_500"
+                    android:padding="1dp" />
 
-        </LinearLayout>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:text="@string/fund_profitability_label"
+                    android:textColor="@color/teal_500"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <include
+                    android:id="@+id/fund_profitability"
+                    layout="@layout/layout_fund_profitabilities" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/fund_volatility_12_months"
+                        android:textColor="@color/teal_500"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="6dp"
+                        android:text="@{fund.formattedVolatility12m}"
+                        android:textColor="@color/gray_700"
+                        android:textSize="14sp"
+                        tools:text="-0.001257" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/fund_detail_simplicity_label"
+                        android:textColor="@color/teal_500"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="6dp"
+                        android:text='@{fund.isSimple ? @string/fund_simplicity_yes : @string/fund_simplicity_no}'
+                        android:textColor="@color/gray_700"
+                        android:textSize="14sp"
+                        tools:text="-0.001257" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/fund_minimum_initial_application_amount"
+                        android:textColor="@color/teal_500"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="6dp"
+                        android:text='@{"R$ " + fund.operability.minimumInitialApplicationAmount}'
+                        android:textColor="@color/gray_700"
+                        android:textSize="14sp"
+                        tools:text="-0.001257" />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="@string/fund_specification"
+                    android:textColor="@color/teal_500"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <include
+                    android:id="@+id/fund_specification"
+                    layout="@layout/layout_fund_specification" />
+            </LinearLayout>
+        </ScrollView>
     </LinearLayout>
-
 </layout>

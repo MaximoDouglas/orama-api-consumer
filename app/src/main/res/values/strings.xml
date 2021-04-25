@@ -4,4 +4,15 @@
     <string name="tab_text_2">Tab 2</string>
     <string name="minimum_initial_application_amount">Aplicação Mínima</string>
     <string name="fund_profitability_label">Rentabilidade</string>
+    <string name="fund_volatility_12_months">Volatilidade em 12 meses:</string>
+    <string name="fund_simplicity_yes">Sim</string>
+    <string name="fund_simplicity_no">Não</string>
+    <string name="fund_detail_simplicity_label">É simples?</string>
+    <string name="fund_minimum_initial_application_amount">Aplicação mínima:</string>
+    <string name="fund_specification">Especificações</string>
+    <string name="fund_main_strategy">Principal estratégia:</string>
+    <string name="fund_suitable_profile">Perfil adequado:</string>
+    <string name="fund_class">Classe do fundo:</string>
+    <string name="fund_class_anbima">Anbima da classe:</string>
+
 </resources>

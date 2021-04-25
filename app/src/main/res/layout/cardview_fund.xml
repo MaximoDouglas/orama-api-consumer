@@ -16,7 +16,7 @@
         android:layout_height="100dp"
         android:layout_margin="6dp"
         app:cardCornerRadius="6dp"
-        app:strokeColor="@color/gray"
+        app:strokeColor="@color/gray_500"
         app:strokeWidth="1dp">
 
         <LinearLayout

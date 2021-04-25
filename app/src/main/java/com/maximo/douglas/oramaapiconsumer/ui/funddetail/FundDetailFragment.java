@@ -73,6 +73,7 @@ public class FundDetailFragment extends Fragment {
     private void handleFundDetailStateChange(Fund fund) {
         mBinding.setFund(fund);
         mBinding.fundProfitability.setProfitabilities(fund.getProfitabilities());
+        mBinding.fundSpecification.setSpecification(fund.getSpecification());
     }
 
 }
