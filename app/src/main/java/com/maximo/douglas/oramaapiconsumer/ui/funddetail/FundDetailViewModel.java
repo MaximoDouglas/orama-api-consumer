@@ -1,4 +1,4 @@
-package com.maximo.douglas.oramaapiconsumer.ui.viewpager.funddetail;
+package com.maximo.douglas.oramaapiconsumer.ui.funddetail;
 
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;

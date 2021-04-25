@@ -1,4 +1,4 @@
-package com.maximo.douglas.oramaapiconsumer.ui.viewpager.funddetail;
+package com.maximo.douglas.oramaapiconsumer.ui.funddetail;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -71,7 +71,8 @@ public class FundDetailFragment extends Fragment {
     }
 
     private void handleFundDetailStateChange(Fund fund) {
-        mBinding.fundNameTextView.setText(fund.getFullName());
+        mBinding.setFund(fund);
+        mBinding.fundProfitability.setProfitabilities(fund.getProfitabilities());
     }
 
 }

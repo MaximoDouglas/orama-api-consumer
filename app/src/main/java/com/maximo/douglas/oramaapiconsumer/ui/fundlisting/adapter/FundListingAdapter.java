@@ -1,4 +1,4 @@
-package com.maximo.douglas.oramaapiconsumer.ui.viewpager.fundlisting.adapter;
+package com.maximo.douglas.oramaapiconsumer.ui.fundlisting.adapter;
 
 import android.view.LayoutInflater;
 import android.view.View;

@@ -143,15 +143,7 @@ public class Fund implements Serializable {
     }
 
     public String getFormattedVolatility12m() {
-        String resultString = "0.00%";
-
-        if (volatility12m != null) {
-            double volatilityDouble = Double.parseDouble(volatility12m) * 100;
-
-            resultString = String.valueOf(MathUtils.round(volatilityDouble, 2));
-        }
-
-        return resultString;
+        return MathUtils.formatStringPercent(volatility12m);
     }
 
     public Profitabilities getProfitabilities() {

@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="profitabilities"
+            type="com.maximo.douglas.oramaapiconsumer.domain.entity.fund.Profitabilities" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            visibleOrGone="@{profitabilities.day != null}"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="6dp"
+            android:layout_marginEnd="6dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Hoje:"
+                android:textColor="@color/teal_500"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="6dp"
+                android:text="@{profitabilities.formattedDay}"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                tools:text="-0.001257" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            visibleOrGone="@{profitabilities.month != null}"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="6dp"
+            android:layout_marginEnd="6dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Este mês:"
+                android:textColor="@color/teal_500"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="6dp"
+                android:text="@{profitabilities.formattedMonth}"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                tools:text="-0.001257" />
+        </LinearLayout>
+
+        <LinearLayout
+            visibleOrGone="@{profitabilities.year != null}"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="6dp"
+            android:layout_marginEnd="6dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Este mês:"
+                android:textColor="@color/teal_500"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="6dp"
+                android:text="@{profitabilities.formattedYear}"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                tools:text="-0.001257" />
+        </LinearLayout>
+
+        <LinearLayout
+            visibleOrGone="@{profitabilities.formattedM12 != null}"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="6dp"
+            android:layout_marginEnd="6dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Últimos 12 meses:"
+                android:textColor="@color/teal_500"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="6dp"
+                android:text="@{profitabilities.formattedM12}"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                tools:text="-0.001257" />
+        </LinearLayout>
+
+        <LinearLayout
+            visibleOrGone="@{profitabilities.formattedM24 != null}"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="6dp"
+            android:layout_marginEnd="6dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Últimos 2 anos:"
+                android:textColor="@color/teal_500"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="6dp"
+                android:text="@{profitabilities.formattedM24}"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                tools:text="-0.001257" />
+        </LinearLayout>
+
+        <LinearLayout
+            visibleOrGone="@{profitabilities.formattedM36 != null}"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="6dp"
+            android:layout_marginEnd="6dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Últimos 3 anos:"
+                android:textColor="@color/teal_500"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="6dp"
+                android:text="@{profitabilities.formattedM36}"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                tools:text="-0.001257" />
+        </LinearLayout>
+
+        <LinearLayout
+            visibleOrGone="@{profitabilities.formattedM48 != null}"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="6dp"
+            android:layout_marginEnd="6dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Últimos 4 anos:"
+                android:textColor="@color/teal_500"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="6dp"
+                android:text="@{profitabilities.formattedM48}"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                tools:text="-0.001257" />
+        </LinearLayout>
+
+        <LinearLayout
+            visibleOrGone="@{profitabilities.formattedM60 != null}"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="6dp"
+            android:layout_marginEnd="6dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Últimos 5 anos:"
+                android:textColor="@color/teal_500"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="6dp"
+                android:text="@{profitabilities.formattedM60}"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                tools:text="-0.001257" />
+        </LinearLayout>
+
+    </LinearLayout>
+</layout>

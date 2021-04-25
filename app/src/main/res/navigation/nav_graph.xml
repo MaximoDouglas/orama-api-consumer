@@ -6,7 +6,7 @@
 
     <fragment
         android:id="@+id/fundListingFragment"
-        android:name="com.maximo.douglas.oramaapiconsumer.ui.viewpager.fundlisting.FundListingFragment"
+        android:name="com.maximo.douglas.oramaapiconsumer.ui.fundlisting.FundListingFragment"
         android:label="FundListingFragment">
         <action
             android:id="@+id/action_fundListingFragment_to_fundDetailFragment"
@@ -15,7 +15,7 @@
 
     <fragment
         android:id="@+id/fundDetailFragment"
-        android:name="com.maximo.douglas.oramaapiconsumer.ui.viewpager.funddetail.FundDetailFragment"
+        android:name="com.maximo.douglas.oramaapiconsumer.ui.funddetail.FundDetailFragment"
         android:label="FundDetailFragment">
 
         <argument

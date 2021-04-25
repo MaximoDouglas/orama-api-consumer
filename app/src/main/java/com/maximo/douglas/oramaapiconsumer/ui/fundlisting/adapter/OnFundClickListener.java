@@ -1,4 +1,4 @@
-package com.maximo.douglas.oramaapiconsumer.ui.viewpager.fundlisting.adapter;
+package com.maximo.douglas.oramaapiconsumer.ui.fundlisting.adapter;
 
 public interface OnFundClickListener {
 

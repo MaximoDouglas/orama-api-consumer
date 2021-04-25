@@ -1,4 +1,4 @@
-package com.maximo.douglas.oramaapiconsumer.ui.viewpager.fundlisting;
+package com.maximo.douglas.oramaapiconsumer.ui.fundlisting;
 
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
@@ -7,7 +7,7 @@ import androidx.lifecycle.ViewModel;
 import com.maximo.douglas.oramaapiconsumer.domain.entity.fund.Fund;
 import com.maximo.douglas.oramaapiconsumer.service.fundservice.FundRemoteDataSource;
 import com.maximo.douglas.oramaapiconsumer.service.fundservice.GetFundListCallBack;
-import com.maximo.douglas.oramaapiconsumer.service.injections.InjectionRemoteDataSource;
+import com.maximo.douglas.oramaapiconsumer.di.InjectionRemoteDataSource;
 
 import java.util.List;
 

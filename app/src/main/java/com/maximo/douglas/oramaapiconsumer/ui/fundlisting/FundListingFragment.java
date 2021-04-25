@@ -1,4 +1,4 @@
-package com.maximo.douglas.oramaapiconsumer.ui.viewpager.fundlisting;
+package com.maximo.douglas.oramaapiconsumer.ui.fundlisting;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -16,8 +16,8 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.maximo.douglas.oramaapiconsumer.R;
 import com.maximo.douglas.oramaapiconsumer.databinding.FragmentFundListingBinding;
 import com.maximo.douglas.oramaapiconsumer.domain.entity.fund.Fund;
-import com.maximo.douglas.oramaapiconsumer.ui.viewpager.fundlisting.adapter.FundListingAdapter;
-import com.maximo.douglas.oramaapiconsumer.ui.viewpager.fundlisting.adapter.OnFundClickListener;
+import com.maximo.douglas.oramaapiconsumer.ui.fundlisting.adapter.FundListingAdapter;
+import com.maximo.douglas.oramaapiconsumer.ui.fundlisting.adapter.OnFundClickListener;
 
 import java.util.ArrayList;
 import java.util.List;
