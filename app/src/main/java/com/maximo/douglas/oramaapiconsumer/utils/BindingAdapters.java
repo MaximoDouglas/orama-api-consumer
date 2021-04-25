@@ -20,7 +20,7 @@ public class BindingAdapters {
     @BindingAdapter("imageUrl")
     public static void setImageUri(ImageView imageView, String imageUrl) {
         Glide.with(imageView.getContext())
-                .load(BASE_URL + "/"+ imageUrl)
+                .load(BASE_URL + imageUrl)
                 .placeholder(R.drawable.ic_photo_24)
                 .error(R.drawable.ic_photo_24)
                 .into(imageView);

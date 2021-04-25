@@ -53,6 +53,7 @@ public class FundListingFragment extends Fragment implements OnFundClickListener
         super.onResume();
         if (this.fundList == null || this.fundList.size() == 0) {
             fundListingViewModel.requestFundList();
+            mBinding.contentLoadingProgressBar.show();
         }
     }
 
@@ -66,6 +67,7 @@ public class FundListingFragment extends Fragment implements OnFundClickListener
 
     private void handleFundListStateChange(List<Fund> fundList) {
         this.fundList = fundList;
+        mBinding.contentLoadingProgressBar.hide();
         fundListingAdapter.setData(this.fundList);
         fundListingAdapter.notifyDataSetChanged();
         mBinding.executePendingBindings();

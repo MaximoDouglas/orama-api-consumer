@@ -9,7 +9,7 @@ import retrofit2.http.GET;
 
 public interface FundApiDataSource {
 
-    @GET("/json/fund_detail_full.json?serializer=fund_detail_full")
+    @GET("json/fund_detail_full.json?serializer=fund_detail_full")
     Call<List<Fund>> getFundApiResponse();
 
 }
