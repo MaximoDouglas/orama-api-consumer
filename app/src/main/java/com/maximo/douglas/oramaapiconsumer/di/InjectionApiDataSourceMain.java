@@ -1,6 +1,5 @@
-package com.maximo.douglas.oramaapiconsumer.service.injections;
+package com.maximo.douglas.oramaapiconsumer.di;
 
-import com.maximo.douglas.oramaapiconsumer.service.ApiDataSource;
 import com.maximo.douglas.oramaapiconsumer.service.fundservice.FundApiDataSource;
 
 import static com.maximo.douglas.oramaapiconsumer.BuildConfig.BASE_URL;

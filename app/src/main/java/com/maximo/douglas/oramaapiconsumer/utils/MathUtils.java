@@ -13,4 +13,16 @@ public class MathUtils {
         return bd.doubleValue();
     }
 
+    public static String formatStringPercent(String value) {
+        String resultString = "0.00%";
+
+        if (value != null) {
+            double volatilityDouble = Double.parseDouble(value) * 100;
+
+            resultString = MathUtils.round(volatilityDouble, 2) + "%";
+        }
+
+        return resultString;
+    }
+
 }

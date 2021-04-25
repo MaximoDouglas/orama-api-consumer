@@ -1,10 +1,10 @@
-package com.maximo.douglas.oramaapiconsumer.service.injections;
+package com.maximo.douglas.oramaapiconsumer.di;
 
 import com.maximo.douglas.oramaapiconsumer.service.fundservice.FundApiDataSource;
 import com.maximo.douglas.oramaapiconsumer.service.fundservice.FundRemoteDataSource;
 import com.maximo.douglas.oramaapiconsumer.service.fundservice.FundRemoteDataSourceImpl;
 
-import static com.maximo.douglas.oramaapiconsumer.service.injections.InjectionApiDataSourceMain.provideFundApiDataSource;
+import static com.maximo.douglas.oramaapiconsumer.di.InjectionApiDataSourceMain.provideFundApiDataSource;
 
 public class InjectionRemoteDataSource {
 

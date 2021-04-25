@@ -2,6 +2,7 @@ package com.maximo.douglas.oramaapiconsumer.domain.entity.fund;
 
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
+import com.maximo.douglas.oramaapiconsumer.utils.MathUtils;
 
 public class Profitabilities {
     @SerializedName("m60")
@@ -66,5 +67,37 @@ public class Profitabilities {
 
     public String getDay() {
         return day;
+    }
+
+    public String getFormattedM60() {
+        return MathUtils.formatStringPercent(m60);
+    }
+
+    public String getFormattedM48() {
+        return MathUtils.formatStringPercent(m48);
+    }
+
+    public String getFormattedM24() {
+        return MathUtils.formatStringPercent(m24);
+    }
+
+    public String getFormattedM36() {
+        return MathUtils.formatStringPercent(m36);
+    }
+
+    public String getFormattedMonth() {
+        return MathUtils.formatStringPercent(month);
+    }
+
+    public String getFormattedM12() {
+        return MathUtils.formatStringPercent(m12);
+    }
+
+    public String getFormattedYear() {
+        return MathUtils.formatStringPercent(year);
+    }
+
+    public String getFormattedDay() {
+        return MathUtils.formatStringPercent(day);
     }
 }

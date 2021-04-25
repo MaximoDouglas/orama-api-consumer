@@ -1,4 +1,4 @@
-package com.maximo.douglas.oramaapiconsumer.ui.home.components;
+package com.maximo.douglas.oramaapiconsumer.ui.components;
 
 import android.content.Context;
 import android.util.AttributeSet;

@@ -1,4 +1,4 @@
-package com.maximo.douglas.oramaapiconsumer.ui.home.viewpager.fundlisting.adapter;
+package com.maximo.douglas.oramaapiconsumer.ui.fundlisting.adapter;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -17,7 +17,7 @@ import java.util.List;
 public class FundListingAdapter extends RecyclerView.Adapter<FundListingAdapter.FundViewHolder> {
 
     private List<Fund> fundList;
-    private OnFundClickListener onFundClickListener;
+    private final OnFundClickListener onFundClickListener;
 
     public FundListingAdapter(OnFundClickListener onFundClickListener) {
         this.onFundClickListener = onFundClickListener;
@@ -34,22 +34,24 @@ public class FundListingAdapter extends RecyclerView.Adapter<FundListingAdapter.
 
     public void setData(List<Fund> fundList) {
         this.fundList = fundList;
-        notifyDataSetChanged();
+        this.notifyDataSetChanged();
+    }
+
+    @Override
+    public void onViewRecycled(@NonNull FundViewHolder holder) {
+        super.onViewRecycled(holder);
     }
 
     @Override
     public void onBindViewHolder(@NonNull FundViewHolder fundViewHolder, int position) {
         Fund currentFund = fundList.get(position);
+
         fundViewHolder.cardviewFundBinding.setFund(currentFund);
     }
 
     @Override
     public int getItemCount() {
-        if (fundList != null) {
-            return fundList.size();
-        } else {
-            return 0;
-        }
+        return fundList == null ? 0 : fundList.size();
     }
 
     class FundViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {

@@ -1,4 +1,4 @@
-package com.maximo.douglas.oramaapiconsumer.ui.home.viewpager.fundlisting;
+package com.maximo.douglas.oramaapiconsumer.ui.fundlisting;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -10,20 +10,19 @@ import androidx.annotation.Nullable;
 import androidx.databinding.DataBindingUtil;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
-import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.maximo.douglas.oramaapiconsumer.R;
 import com.maximo.douglas.oramaapiconsumer.databinding.FragmentFundListingBinding;
 import com.maximo.douglas.oramaapiconsumer.domain.entity.fund.Fund;
-import com.maximo.douglas.oramaapiconsumer.ui.home.viewpager.fundlisting.adapter.FundListingAdapter;
-import com.maximo.douglas.oramaapiconsumer.ui.home.viewpager.fundlisting.adapter.OnFundClickListener;
+import com.maximo.douglas.oramaapiconsumer.ui.fundlisting.adapter.FundListingAdapter;
+import com.maximo.douglas.oramaapiconsumer.ui.fundlisting.adapter.OnFundClickListener;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import static java.sql.DriverManager.println;
+import static androidx.navigation.Navigation.findNavController;
 
 public class FundListingFragment extends Fragment implements OnFundClickListener {
 
@@ -32,11 +31,9 @@ public class FundListingFragment extends Fragment implements OnFundClickListener
 
     private final FundListingAdapter fundListingAdapter = new FundListingAdapter(this);
 
-    private List<Fund> fundList = new ArrayList<Fund>();
+    private List<Fund> fundList = new ArrayList<>();
 
-    public static FundListingFragment newInstance() {
-        return new FundListingFragment();
-    }
+    private Bundle fragmentState;
 
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -49,8 +46,14 @@ public class FundListingFragment extends Fragment implements OnFundClickListener
         super.onViewCreated(view, savedInstanceState);
         setupRecyclerView();
         setupViewModel();
+    }
 
-        fundListingViewModel.requestFundList();
+    @Override
+    public void onResume() {
+        super.onResume();
+        if (this.fundList == null || this.fundList.size() == 0) {
+            fundListingViewModel.requestFundList();
+        }
     }
 
     private void setupViewModel() {
@@ -64,6 +67,8 @@ public class FundListingFragment extends Fragment implements OnFundClickListener
     private void handleFundListStateChange(List<Fund> fundList) {
         this.fundList = fundList;
         fundListingAdapter.setData(this.fundList);
+        fundListingAdapter.notifyDataSetChanged();
+        mBinding.executePendingBindings();
     }
 
     private void setupRecyclerView() {
@@ -75,7 +80,11 @@ public class FundListingFragment extends Fragment implements OnFundClickListener
 
     @Override
     public void onClick(Integer fundId) {
-        println(searchFundById(fundId).getFullName());
+        Fund selectedFund = searchFundById(fundId);
+
+        findNavController(mBinding.fundListingRecyclerView).navigate(
+                FundListingFragmentDirections.actionFundListingFragmentToFundDetailFragment(selectedFund)
+        );
     }
 
     private Fund searchFundById(Integer fundId) {
