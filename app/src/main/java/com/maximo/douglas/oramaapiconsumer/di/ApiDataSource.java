@@ -1,4 +1,4 @@
-package com.maximo.douglas.oramaapiconsumer.service;
+package com.maximo.douglas.oramaapiconsumer.di;
 
 import com.google.gson.Gson;
 import com.maximo.douglas.oramaapiconsumer.service.fundservice.FundApiDataSource;

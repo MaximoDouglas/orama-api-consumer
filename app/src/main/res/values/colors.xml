@@ -3,6 +3,9 @@
     <color name="teal_700">#FF018786</color>
     <color name="teal_500">#009688</color>
     <color name="black">#FF000000</color>
-    <color name="gray">#C8C8C8</color>
+    <color name="gray_500">#C8C8C8</color>
+    <color name="gray_700">#383838</color>
+    <color name="green">#009000</color>
+    <color name="red">#ff0000</color>
     <color name="white">#FFFFFFFF</color>
 </resources>

@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="profitabilities"
+            type="com.maximo.douglas.oramaapiconsumer.domain.entity.fund.Profitabilities" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            visibleOrGone="@{profitabilities.day != null}"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="6dp"
+            android:layout_marginEnd="6dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/fund_profitability_today_label"
+                android:textColor="@color/green"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="6dp"
+                android:text="@{profitabilities.formattedDay}"
+                android:textColor="@color/gray_700"
+                android:textSize="14sp"
+                tools:text="-0.001257" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            visibleOrGone="@{profitabilities.month != null}"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="6dp"
+            android:layout_marginEnd="6dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/fund_profitability_this_month_label"
+                android:textColor="@color/green"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="6dp"
+                android:text="@{profitabilities.formattedMonth}"
+                android:textColor="@color/gray_700"
+                android:textSize="14sp"
+                tools:text="-0.001257" />
+        </LinearLayout>
+
+        <LinearLayout
+            visibleOrGone="@{profitabilities.year != null}"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="6dp"
+            android:layout_marginEnd="6dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/fund_profitability_this_year_label"
+                android:textColor="@color/green"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="6dp"
+                android:text="@{profitabilities.formattedYear}"
+                android:textColor="@color/gray_700"
+                android:textSize="14sp"
+                tools:text="-0.001257" />
+        </LinearLayout>
+
+        <LinearLayout
+            visibleOrGone="@{profitabilities.formattedM12 != null}"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="6dp"
+            android:layout_marginEnd="6dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/fund_profitability_last_twelve_months_label"
+                android:textColor="@color/green"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="6dp"
+                android:text="@{profitabilities.formattedM12}"
+                android:textColor="@color/gray_700"
+                android:textSize="14sp"
+                tools:text="-0.001257" />
+        </LinearLayout>
+
+        <LinearLayout
+            visibleOrGone="@{profitabilities.formattedM24 != null}"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="6dp"
+            android:layout_marginEnd="6dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/fund_profitability_last_two_years_label"
+                android:textColor="@color/green"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="6dp"
+                android:text="@{profitabilities.formattedM24}"
+                android:textColor="@color/gray_700"
+                android:textSize="14sp"
+                tools:text="-0.001257" />
+        </LinearLayout>
+
+        <LinearLayout
+            visibleOrGone="@{profitabilities.formattedM36 != null}"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="6dp"
+            android:layout_marginEnd="6dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/fund_profitability_last_three_years_label"
+                android:textColor="@color/green"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="6dp"
+                android:text="@{profitabilities.formattedM36}"
+                android:textColor="@color/gray_700"
+                android:textSize="14sp"
+                tools:text="-0.001257" />
+        </LinearLayout>
+
+        <LinearLayout
+            visibleOrGone="@{profitabilities.formattedM48 != null}"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="6dp"
+            android:layout_marginEnd="6dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/fund_profitability_last_four_years_label"
+                android:textColor="@color/green"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="6dp"
+                android:text="@{profitabilities.formattedM48}"
+                android:textColor="@color/gray_700"
+                android:textSize="14sp"
+                tools:text="-0.001257" />
+        </LinearLayout>
+
+        <LinearLayout
+            visibleOrGone="@{profitabilities.formattedM60 != null}"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="6dp"
+            android:layout_marginEnd="6dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/fund_profitability_last_five_years_label"
+                android:textColor="@color/green"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="6dp"
+                android:text="@{profitabilities.formattedM60}"
+                android:textColor="@color/gray_700"
+                android:textSize="14sp"
+                tools:text="-0.001257" />
+        </LinearLayout>
+
+    </LinearLayout>
+</layout>

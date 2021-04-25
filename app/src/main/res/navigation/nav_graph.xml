@@ -1,10 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/nav_graph"
-    app:startDestination="@id/homeFragment">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/fundListingFragment">
 
     <fragment
-        android:id="@+id/homeFragment"
-        android:name="com.maximo.douglas.oramaapiconsumer.ui.home.HomeFragment"
-        android:label="HomeFragment" />
+        android:id="@+id/fundListingFragment"
+        android:name="com.maximo.douglas.oramaapiconsumer.ui.fundlisting.FundListingFragment"
+        android:label="FundListingFragment">
+        <action
+            android:id="@+id/action_fundListingFragment_to_fundDetailFragment"
+            app:destination="@id/fundDetailFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/fundDetailFragment"
+        android:name="com.maximo.douglas.oramaapiconsumer.ui.funddetail.FundDetailFragment"
+        android:label="FundDetailFragment">
+
+        <argument
+            android:name="fund"
+            app:argType="com.maximo.douglas.oramaapiconsumer.domain.entity.fund.Fund" />
+    </fragment>
+
 </navigation>

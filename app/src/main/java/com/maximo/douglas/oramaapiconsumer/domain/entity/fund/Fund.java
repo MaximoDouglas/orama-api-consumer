@@ -5,10 +5,11 @@ import com.google.gson.annotations.SerializedName;
 import com.maximo.douglas.oramaapiconsumer.domain.entity.fund.specification.Specification;
 import com.maximo.douglas.oramaapiconsumer.utils.MathUtils;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Date;
 
-public class Fund {
+public class Fund implements Serializable {
     @SerializedName("id")
     @Expose
     private Integer id;
@@ -21,10 +22,6 @@ public class Fund {
     @Expose
     private Boolean isSimple;
 
-    @SerializedName("description_seo")
-    @Expose
-    private String descriptionSeo;
-
     @SerializedName("operability")
     @Expose
     private Operability operability;
@@ -32,10 +29,6 @@ public class Fund {
     @SerializedName("full_name")
     @Expose
     private String fullName;
-
-    @SerializedName("opening_date")
-    @Expose
-    private Date openingDate;
 
     @SerializedName("is_closed")
     @Expose
@@ -61,10 +54,6 @@ public class Fund {
     @Expose
     private String taxClassification;
 
-    @SerializedName("cnpj")
-    @Expose
-    private String cnpj;
-
     @SerializedName("description")
     @Expose
     private Description description;
@@ -72,18 +61,6 @@ public class Fund {
     @SerializedName("is_active")
     @Expose
     private Boolean isActive;
-
-    @SerializedName("benchmark")
-    @Expose
-    private Benchmark benchmark;
-
-    @SerializedName("orama_standard")
-    @Expose
-    private Boolean oramaStandard;
-
-    @SerializedName("slug")
-    @Expose
-    private String slug;
 
     @SerializedName("fund_situation")
     @Expose
@@ -97,10 +74,6 @@ public class Fund {
     @Expose
     private Profitabilities profitabilities;
 
-    @SerializedName("closed_to_capture_explanation")
-    @Expose
-    private String closedToCaptureExplanation;
-
     @SerializedName("net_patrimony_12m")
     @Expose
     private String netPatrimony12M;
@@ -108,16 +81,6 @@ public class Fund {
     @SerializedName("fund_manager")
     @Expose
     private FundManager fundManager;
-
-    @SerializedName("esg_seal")
-    @Expose
-    private String esgSeal;
-
-    public Fund(String simpleName, Operability operability, String volatility12m) {
-        this.simpleName = simpleName;
-        this.operability = operability;
-        this.volatility12m = volatility12m;
-    }
 
     public Integer getId() {
         return id;
@@ -127,12 +90,8 @@ public class Fund {
         return fees;
     }
 
-    public Boolean getSimple() {
+    public Boolean getIsSimple() {
         return isSimple;
-    }
-
-    public String getDescriptionSeo() {
-        return descriptionSeo;
     }
 
     public Operability getOperability() {
@@ -141,10 +100,6 @@ public class Fund {
 
     public String getFullName() {
         return fullName;
-    }
-
-    public Date getOpeningDate() {
-        return openingDate;
     }
 
     public Boolean getClosed() {
@@ -171,28 +126,12 @@ public class Fund {
         return taxClassification;
     }
 
-    public String getCnpj() {
-        return cnpj;
-    }
-
     public Description getDescription() {
         return description;
     }
 
     public Boolean getActive() {
         return isActive;
-    }
-
-    public Benchmark getBenchmark() {
-        return benchmark;
-    }
-
-    public Boolean getOramaStandard() {
-        return oramaStandard;
-    }
-
-    public String getSlug() {
-        return slug;
     }
 
     public FundSituation getFundSituation() {
@@ -204,17 +143,11 @@ public class Fund {
     }
 
     public String getFormattedVolatility12m() {
-        double volatilityDouble = Double.parseDouble(volatility12m) * 100;
-
-        return String.valueOf(MathUtils.round(volatilityDouble, 2));
+        return MathUtils.formatStringPercent(volatility12m);
     }
 
     public Profitabilities getProfitabilities() {
         return profitabilities;
-    }
-
-    public String getClosedToCaptureExplanation() {
-        return closedToCaptureExplanation;
     }
 
     public String getNetPatrimony12M() {
@@ -225,7 +158,4 @@ public class Fund {
         return fundManager;
     }
 
-    public String getEsgSeal() {
-        return esgSeal;
-    }
 }
