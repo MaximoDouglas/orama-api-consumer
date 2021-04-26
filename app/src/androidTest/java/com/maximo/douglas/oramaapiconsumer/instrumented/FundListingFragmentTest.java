@@ -18,7 +18,6 @@ import static com.maximo.douglas.oramaapiconsumer.testutils.RecyclerViewMatcher.
 public class FundListingFragmentTest extends BaseInstrumentedTesting {
 
     private static final String FIRST_ITEM_SIMPLE_NAME = "PIMCO Income Dólar FIC FIM IE";
-    private static final String FUND_MINIMUM_APPLICATION_AMOUNT = "R$ 5000,00";
     private static final int FIRST_ITEM_POSITION = 0;
 
     @Override
