@@ -30,11 +30,11 @@ jobs:
         uses: actions/setup-java@v1
         with:
           java-version: 1.8
-      - name: Build release APK
+      - name: Build debug APK
         run:  |
-          bash ./gradlew assembleRelease
+          bash ./gradlew assembleDebug
       - name: Upload APK to Action artfacts
         uses: actions/upload-artifact@v1
         with:
           name: app
-          path: app/build/outputs/apk/debug/app-release.apk
+          path: app/build/outputs/apk/debug/app-debug.apk
