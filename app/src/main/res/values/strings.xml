@@ -23,5 +23,6 @@
     <string name="fund_profitability_last_three_years_label">Últimos 3 anos:</string>
     <string name="fund_profitability_last_four_years_label">Últimos 4 anos:</string>
     <string name="fund_profitability_last_five_years_label">Últimos 5 anos:</string>
+    <string name="fund_listing_toolbar_title">Fundos</string>
 
 </resources>

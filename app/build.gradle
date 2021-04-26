@@ -15,7 +15,10 @@ android {
         versionName "1.0"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        testOptions.unitTests.includeAndroidResources = true
     }
+
+    testBuildType "mockedEnvironment"
 
     buildTypes {
         release {
@@ -28,6 +31,11 @@ android {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
             buildConfigField "String", "BASE_URL", "\"https://s3.amazonaws.com/orama-media/\""
+        }
+
+        mockedEnvironment {
+            initWith debug
+            buildConfigField "String", "BASE_URL", "\"http://localhost:8500\""
         }
     }
 
@@ -50,9 +58,13 @@ dependencies {
     implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.3.1'
     implementation 'androidx.navigation:navigation-fragment:2.3.5'
     implementation 'androidx.navigation:navigation-ui:2.3.5'
+
+    // Testing
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
+    androidTestImplementation "androidx.fragment:fragment-testing:1.3.2"
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+    androidTestImplementation "com.squareup.okhttp3:mockwebserver:4.9.1"
 
     // API Consume
     implementation 'com.squareup.retrofit2:retrofit:2.9.0'

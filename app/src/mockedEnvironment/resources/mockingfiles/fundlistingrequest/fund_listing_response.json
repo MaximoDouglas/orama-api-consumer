@@ -1,0 +1,320 @@
+[
+  {
+    "initial_date": "2019-02-27",
+    "performance_audios": [],
+    "fees": {
+      "maximum_administration_fee": "0,93%",
+      "anticipated_retrieval_fee_value": "0.00",
+      "administration_fee": "0,93%",
+      "anticipated_retrieval_fee": "Não há",
+      "performance_fee": "Não há",
+      "has_anticipated_retrieval": false
+    },
+    "is_simple": false,
+    "description_seo": "Investir em fundos pela Órama é a melhor forma de acessar todos os investimentos sem preocupação, afinal, tem sempre um especialista cuidando disso para você.",
+    "operability": {
+      "has_operations_on_thursdays": false,
+      "retrieval_liquidation_days_type": "úteis",
+      "application_quotation_days_type": "úteis",
+      "retrieval_quotation_days": 1,
+      "anticipated_retrieval_quotation_days_type": "corridos",
+      "anticipated_retrieval_quotation_days_str": "Não há",
+      "retrieval_quotation_days_type": "úteis",
+      "anticipated_retrieval_quotation_days": 0,
+      "has_operations_on_wednesdays": true,
+      "minimum_balance_permanence": "1000.00",
+      "has_operations_on_mondays": false,
+      "has_grace_period": false,
+      "application_time_limit": "13:00:59",
+      "retrieval_time_limit": "13:00:59",
+      "has_operations_on_fridays": false,
+      "anticipate_retrieval_liquidation_days": 0,
+      "minimum_initial_application_amount": "5000.00",
+      "anticipate_retrieval_liquidation_days_type": "corridos",
+      "retrieval_special_type": "",
+      "anticipate_retrieval_liquidation_days_str": "Não há",
+      "application_quotation_days_str": "D+1 (somente às quartas-feiras)",
+      "grace_period_in_days_str": null,
+      "retrieval_quotation_days_str": "D+1 (somente às quartas-feiras)",
+      "grace_period_in_days": 0,
+      "retrieval_liquidation_days_str": "D+5",
+      "minimum_subsequent_retrieval_amount": "0.00",
+      "retrieval_direct": false,
+      "retrieval_liquidation_days": 5,
+      "application_quotation_days": 1,
+      "max_balance_permanence": "0.00",
+      "maximum_initial_application_amount": "0.00",
+      "has_operations_on_tuesdays": false,
+      "minimum_subsequent_application_amount": "1000.00"
+    },
+    "full_name": "PIMCO Income Dólar FIC FIM IE",
+    "opening_date": null,
+    "id": 1013,
+    "is_closed": false,
+    "simple_name": "PIMCO Income Dólar FIC FIM IE",
+    "target_fund": null,
+    "documents": [
+      {
+        "position": 2,
+        "document_type": "Formulário de Informações Complementares",
+        "name": "Formulário de Informações Complementares",
+        "document_url": "app_img/fund_document/FORM_INFO_COMP_-_PIMCO_Income_Dólar_FIC_FIM_IE_2019_02_08.pdf"
+      },
+      {
+        "position": 0,
+        "document_type": "Ata de Assembleia",
+        "name": "Ata da Assembleia",
+        "document_url": "app_img/fund_document/20210225151758_Ata_da_Assembleia_-_PIMCO_Income_Dólar_FIC_FIM_IE_-_20210224.pdf"
+      },
+      {
+        "position": 4,
+        "document_type": "Lâmina",
+        "name": "Lâmina",
+        "document_url": "app_img/fund_document/20210304120006_PIMCO_Income_Dólar_FIC_FIM_IE.pdf"
+      },
+      {
+        "position": 1,
+        "document_type": "Regulamento",
+        "name": "Regulamento",
+        "document_url": "app_img/fund_document/20210330212957_R_-_PIMCO_Income_Dólar_FIC_FIM_IE_-_20210329.pdf"
+      },
+      {
+        "position": 0,
+        "document_type": "Material de Distribuição",
+        "name": "Material de Distribuição",
+        "document_url": "app_img/fund_document/20210406150016_PIMCO_Income_Dólar_FIC_FIM_IE.pdf"
+      }
+    ],
+    "specification": {
+      "fund_main_strategy_name": "Renda Fixa Global",
+      "fund_suitability_profile": {
+        "score_range_order": 3,
+        "name": "Arrojado"
+      },
+      "fund_risk_profile": {
+        "score_range_order": 10,
+        "name": "Régua de risco 10"
+      },
+      "fund_main_strategy_explanation": "Fundos que investem em uma carteira diversificada de títulos de renda fixa, soberanos ou privados, principalmente estrangeiros. A seleção dos títulos é baseada em análise fundamentalista.",
+      "fund_type": "Multimercado",
+      "fund_class": "Multimercado Investimento no Exterior",
+      "fund_macro_strategy": {
+        "explanation": "Fundos que buscam retorno por meio de investimentos em ativos de renda fixa. São indicados para a parcela conservadora da carteira do investidor. Podem investir em títulos públicos e/ ou em títulos privados, com remuneração prefixada, pós-fixada ou atrelada a algum índice de preço.",
+        "id": 1,
+        "name": "Renda Fixa"
+      },
+      "fund_class_anbima": "Fundos que podem investir mais de 40% do seu patrimônio líquido em ativos financeiros no exterior.",
+      "fund_main_strategy": {
+        "explanation": "Fundos que investem em uma carteira diversificada de títulos de renda fixa, soberanos ou privados, principalmente estrangeiros. A seleção dos títulos é baseada em análise fundamentalista.",
+        "fund_macro_strategy": 1,
+        "id": 21,
+        "name": "Renda Fixa Global"
+      },
+      "is_qualified": true
+    },
+    "quota_date": "2021-04-22",
+    "tax_classification": "Longo prazo",
+    "cnpj": "32.225.478/0001-06",
+    "description": {
+      "objective": "A política de investimento do FUNDO consiste\r\nem aplicar, no mínimo, 95% (noventa e cinco por cento)\r\nde seu patrimônio líquido em cotas do PIMCO INCOME\r\nDÓLAR FUNDO DE INVESTIMENTO MULTIMERCADO\r\nINVESTIMENTO NO EXTERIOR, inscrito no CNPJ nº\r\n32.225.606/0001-11 (“Fundo Master”), administrado pelo\r\nADMINISTRADOR e gerido pela GESTORA, cuja\r\npolítica de investimento consiste em aplicar os recursos\r\ndos cotistas em instrumentos, valores mobiliários e\r\nativos financeiros de diferentes naturezas e\r\ncaracterísticas, de acordo com uma política de gestão\r\nde carteira com o objetivo de que visa a obter\r\noportunidades em diferentes mercados, baseada em\r\numa sólida análise macroeconômica e sujeita às\r\nrestrições descritas no presente Regulamento.",
+      "movie_url": null,
+      "target_audience": "Investidores Qualificados",
+      "strengths": "A PIMCO foi fundada em 1971, presente em 12 países e no Brasil desde 2012. Recebeu vários prêmios da Morningstar como Gestor de Renda Fixa. Indicado para diversificação global.",
+      "strategy": "Fundo classificado como Renda Fixa Global - Investimento no Exterior, com objetivo de retorno de CDI+3% ao ano no médio/longo prazo. O Fundo investe no mercado de renda fixa global, com exposição cambial, com base em análise macroeconômica e fundamentalista. Possui uma gestão internacional que busca das melhores oportunidades de renda fixa ao redor do mundo, com o objetivo de captar as grandes tendências."
+    },
+    "performance_videos": [],
+    "is_active": true,
+    "benchmark": {
+      "id": 2,
+      "name": "CDI"
+    },
+    "orama_standard": true,
+    "slug": "PIMCO-Income-Dolar-FIC-FIM-IE",
+    "fund_situation": {
+      "code": "1",
+      "name": "Fundo aberto"
+    },
+    "volatility_12m": "0.181350",
+    "strategy_video": null,
+    "insurance_company_code": null,
+    "profitabilities": {
+      "m60": null,
+      "m48": null,
+      "m24": "0.571826",
+      "m36": null,
+      "month": "-0.016825",
+      "m12": "0.247703",
+      "year": "0.067609",
+      "day": "-0.001257"
+    },
+    "closed_to_capture_explanation": "",
+    "closing_date": null,
+    "net_patrimony_12m": "0.00",
+    "is_closed_to_capture": false,
+    "fund_manager": {
+      "description": "Fundada em 1971, a PIMCO é formada por mais de 2.000 profissionais dedicados, em 12 países, compartilhando a mesma missão: gerenciar riscos e gerar retorno para nossos clientes. Gerimos investimentos para uma ampla variedade de clientes, incluindo fundos de pensão públicos e privados, bem como ativos em nome de milhões de pessoas, de todos os extratos sociais, em todo o mundo. Somos investidores de longo prazo e líderes de opinião. Nossas perspectivas e soluções baseiam-se em um processo de investimento comprovado, que gera visões macroeconômicas cíclicas (de curto prazo) e seculares (de três a cinco anos), e que alia essas previsões com profundas pesquisas de crédito, análises de capital e gerenciamento de riscos. Em 30/Jun/2016 a PIMCO possuía USD 1,51 trilhões de ativos sob gestão.",
+      "id": 41,
+      "full_name": "PIMCO Latin America Administradora de Carteiras LTDA.",
+      "logo": "app_img/manager/logo_small/pimco.jpg",
+      "slug": "PIMCO",
+      "name": "PIMCO"
+    },
+    "esg_seal": false
+  },
+  {
+    "initial_date": "2018-06-25",
+    "performance_audios": [],
+    "fees": {
+      "maximum_administration_fee": "0,85%",
+      "anticipated_retrieval_fee_value": "0.00",
+      "administration_fee": "0,85%",
+      "anticipated_retrieval_fee": "Não há",
+      "performance_fee": "Não há",
+      "has_anticipated_retrieval": false
+    },
+    "is_simple": false,
+    "description_seo": "A Oaktree é um fundo de baixa correlação com o mercado local. Indicado para diversificação global, sem exposição cambial.",
+    "operability": {
+      "has_operations_on_thursdays": true,
+      "retrieval_liquidation_days_type": "úteis",
+      "application_quotation_days_type": "úteis",
+      "retrieval_quotation_days": 9,
+      "anticipated_retrieval_quotation_days_type": "corridos",
+      "anticipated_retrieval_quotation_days_str": "Não há",
+      "retrieval_quotation_days_type": "corridos",
+      "anticipated_retrieval_quotation_days": 0,
+      "has_operations_on_wednesdays": true,
+      "minimum_balance_permanence": "500.00",
+      "has_operations_on_mondays": true,
+      "has_grace_period": false,
+      "application_time_limit": "14:00:59",
+      "retrieval_time_limit": "14:00:59",
+      "has_operations_on_fridays": true,
+      "anticipate_retrieval_liquidation_days": 0,
+      "minimum_initial_application_amount": "500.00",
+      "anticipate_retrieval_liquidation_days_type": "corridos",
+      "retrieval_special_type": "",
+      "anticipate_retrieval_liquidation_days_str": "Não há",
+      "application_quotation_days_str": "D+1",
+      "grace_period_in_days_str": null,
+      "retrieval_quotation_days_str": "D+9 (solicitações de resgate apenas às segundas-feiras)",
+      "grace_period_in_days": 0,
+      "retrieval_liquidation_days_str": "D+3",
+      "minimum_subsequent_retrieval_amount": "500.00",
+      "retrieval_direct": false,
+      "retrieval_liquidation_days": 3,
+      "application_quotation_days": 1,
+      "max_balance_permanence": "0.00",
+      "maximum_initial_application_amount": "0.00",
+      "has_operations_on_tuesdays": true,
+      "minimum_subsequent_application_amount": "500.00"
+    },
+    "full_name": "Oaktree Global Credit Fundo de Investimento em Cotas de Fundos de Investimento Multimercado Investimento no Exterior",
+    "opening_date": null,
+    "id": 522,
+    "is_closed": false,
+    "simple_name": "Oaktree Global Credit FIC FIM IE",
+    "target_fund": null,
+    "documents": [
+      {
+        "position": 1,
+        "document_type": "Regulamento",
+        "name": "Regulamento",
+        "document_url": "app_img/fund_document/20201014114540_R_-_Oaktree_Global_Credit_FIC_FIM_IE_-_20201008.pdf"
+      },
+      {
+        "position": 0,
+        "document_type": "Convocação de Assembleia",
+        "name": "Convocação",
+        "document_url": "app_img/fund_document/20201126172547_Convocação_-_Oaktree_Global_Credit_FIC_FIM_IE_-_20201118.pdf"
+      },
+      {
+        "position": 0,
+        "document_type": "Material de Distribuição",
+        "name": "Material de Distribuição",
+        "document_url": "app_img/fund_document/20210412140001_Oaktree_Global_Credit_FIC_FIM_IE.pdf"
+      },
+      {
+        "position": 2,
+        "document_type": "Formulário de Informações Complementares",
+        "name": "Formulário de Informações Complementares",
+        "document_url": "app_img/fund_document/20210413191602_FORM_INFO_COMP_-_Oaktree_Global_Credit_FIC_FIM_IE_-_20210326.pdf"
+      }
+    ],
+    "specification": {
+      "fund_main_strategy_name": "Renda Fixa Global",
+      "fund_suitability_profile": {
+        "score_range_order": 1,
+        "name": "Conservador"
+      },
+      "fund_risk_profile": {
+        "score_range_order": 4,
+        "name": "Régua de risco 4"
+      },
+      "fund_main_strategy_explanation": "Fundos que investem em uma carteira diversificada de títulos de renda fixa, soberanos ou privados, principalmente estrangeiros. A seleção dos títulos é baseada em análise fundamentalista.",
+      "fund_type": "Multimercado",
+      "fund_class": "Multimercado Investimento no Exterior",
+      "fund_macro_strategy": {
+        "explanation": "Fundos que buscam retorno por meio de investimentos em ativos de renda fixa. São indicados para a parcela conservadora da carteira do investidor. Podem investir em títulos públicos e/ ou em títulos privados, com remuneração prefixada, pós-fixada ou atrelada a algum índice de preço.",
+        "id": 1,
+        "name": "Renda Fixa"
+      },
+      "fund_class_anbima": "Fundos que podem investir mais de 40% do seu patrimônio líquido em ativos financeiros no exterior.",
+      "fund_main_strategy": {
+        "explanation": "Fundos que investem em uma carteira diversificada de títulos de renda fixa, soberanos ou privados, principalmente estrangeiros. A seleção dos títulos é baseada em análise fundamentalista.",
+        "fund_macro_strategy": 1,
+        "id": 21,
+        "name": "Renda Fixa Global"
+      },
+      "is_qualified": true
+    },
+    "quota_date": "2021-04-22",
+    "tax_classification": "Longo prazo",
+    "cnpj": "29.853.005/0001-49",
+    "description": {
+      "objective": "A política de investimento do FUNDO consiste em aplicar, no mínimo,95% de seu patrimônio líquido em cotas   do OAKTREE   GLOBAL   CREDIT   FUNDO   DE INVESTIMENTO MULTIMERCADO INVESTIMENTO NO EXTERIOR, inscrito no CNPJ sob o nº29.363.886/0001-10(“Fundo    Master”),    administrado    peloADMINISTRADORe gerido pelaGESTORA, cuja política de  investimento  consiste  emaplicar no  mínimo,  67% (sessenta  e  sete  por  cento)  do  patrimônio  líquido  do FUNDO no  fundo  OAKTREE  GLOBAL  CREDIT  FUND, um  fundo  de  investimento  constituído  sob  as  leis  de Luxemburgo,  que,  por  sua  vez,  realizará  aplicações  em ativos     financeiros     de     diferentes     naturezas     ecaracterísticas.  Portanto,  para  a  consecução  de  seus objetivos e a valorização de suas quotas, o Fundo Master poderá  aplicar  até  100%  de  seus  recursos  em  ativos financeiros emitidos e/ou negociados no exterior.",
+      "movie_url": null,
+      "target_audience": "Investidores qualificados",
+      "strengths": "A Oaktree foi fundada em 1995, presente em 13 países. É um fundo de baixa correlação com o mercado local. Indicado para diversificação global, sem exposição cambial.",
+      "strategy": "Fundo classificado como Renda Fixa Global. Fundada em 1995 por Howard Marks, a Oaktree Capital é uma das principais gestoras globais, especializadas em crédito. Utilizando uma abordagem fundamentalista bottom-up, o fundo investe em ativos globais de crédito, com o objetivo de construir um portfólio diversificado, que busca retornos de longo prazo atrativos e consistentes, em termos absolutos e ajustados ao risco. A carteira gira em torno de 500 ativos, alocados de forma oportunista em 6 diferentes instrumentos de crédito (High Yield Bonds, Senior Loans, Real Estate Debt, Corporate Structured Credit, Emerging Markets Debt e Global Convertibles). A estratégia busca atingir retornos de CDI + 4%. Fundo sem exposição cambial."
+    },
+    "performance_videos": [],
+    "is_active": true,
+    "benchmark": {
+      "id": 2,
+      "name": "CDI"
+    },
+    "orama_standard": false,
+    "slug": "Mongeral-Aegon-Oaktree-Global-Credit-FIC-FIM-IE",
+    "fund_situation": {
+      "code": "1",
+      "name": "Fundo aberto"
+    },
+    "volatility_12m": "0.049705",
+    "strategy_video": null,
+    "insurance_company_code": null,
+    "profitabilities": {
+      "m60": null,
+      "m48": null,
+      "m24": "0.110081",
+      "m36": null,
+      "month": "0.003718",
+      "m12": "0.232994",
+      "year": "0.016353",
+      "day": "0.000394"
+    },
+    "closed_to_capture_explanation": "",
+    "closing_date": null,
+    "net_patrimony_12m": "48721894.31",
+    "is_closed_to_capture": false,
+    "fund_manager": {
+      "description": "A Mongeral Aegon Investimentos (MAI) é uma empresa de Asset Management independente, com mais de R$ 3,5 bilhões de ativos sob gestão, sendo R$ 1,66 bilhão em Multimercados, R$ 1,55 bilhão em Renda Fixa e R$ 274 milhões em outras categorias. A MAI iniciou suas atividades como empresa autorizada pela CVM em Janeiro de 2013 para atuar como gestora de recursos do Grupo Mongeral Aegon. A empresa é 100% controlada pela Mongeral Aegon Holding SA, companhia de controle compartilhado entre os sócios brasileiros (famílias Mota e Molina com 50% e Aegon Investments com 50%). A MAI conta com a estrutura de Pesquisa e Gestão do Grupo Aegon, presente em 24 países, com cerca de US$ 950 bilhões em ativos.",
+      "id": 109,
+      "full_name": "Mongeral Aegon Investimentos LTDA",
+      "logo": "app_img/manager/logo_small/Logo_mag.jpg",
+      "slug": "Mongeral-Aegon-Investimentos",
+      "name": "Mongeral Aegon Investimentos"
+    },
+    "esg_seal": false
+  }
+]
