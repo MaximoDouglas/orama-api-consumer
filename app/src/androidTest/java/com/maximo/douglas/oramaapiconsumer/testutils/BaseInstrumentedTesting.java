@@ -1,10 +1,4 @@
-package com.maximo.douglas.oramaapiconsumer.instrumented;
-
-import android.app.Activity;
-
-import androidx.test.core.app.ActivityScenario;
-
-import com.maximo.douglas.oramaapiconsumer.MainActivity;
+package com.maximo.douglas.oramaapiconsumer.testutils;
 
 import org.jetbrains.annotations.NotNull;
 import org.junit.After;
@@ -26,7 +20,7 @@ public abstract class BaseInstrumentedTesting {
     @Before
     public void setup() throws IOException {
         startMockWebServer();
-        launchActivity();
+        initSetup();
         waitViewToComplete();
     }
 
@@ -35,7 +29,7 @@ public abstract class BaseInstrumentedTesting {
         stopMockWebServer();
     }
 
-    public abstract void launchActivity();
+    public abstract void initSetup();
 
     private final MockWebServer mockWebServer = new MockWebServer();
 

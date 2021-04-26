@@ -1,11 +1,11 @@
-package com.maximo.douglas.oramaapiconsumer.instrumented.navigation;
+package com.maximo.douglas.oramaapiconsumer.instrumented;
 
 import androidx.test.core.app.ActivityScenario;
 import androidx.test.internal.runner.junit4.AndroidJUnit4ClassRunner;
 
 import com.maximo.douglas.oramaapiconsumer.MainActivity;
 import com.maximo.douglas.oramaapiconsumer.R;
-import com.maximo.douglas.oramaapiconsumer.instrumented.BaseInstrumentedTesting;
+import com.maximo.douglas.oramaapiconsumer.testutils.BaseInstrumentedTesting;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -19,7 +19,7 @@ import static androidx.test.espresso.matcher.ViewMatchers.withId;
 public class MainActivityTest extends BaseInstrumentedTesting {
 
     @Override
-    public void launchActivity() {
+    public void initSetup() {
         ActivityScenario.launch(MainActivity.class);
     }
 

@@ -1,11 +1,11 @@
-package com.maximo.douglas.oramaapiconsumer.instrumented.navigation;
+package com.maximo.douglas.oramaapiconsumer.instrumented;
 
 import androidx.test.core.app.ActivityScenario;
 import androidx.test.internal.runner.junit4.AndroidJUnit4ClassRunner;
 
 import com.maximo.douglas.oramaapiconsumer.MainActivity;
 import com.maximo.douglas.oramaapiconsumer.R;
-import com.maximo.douglas.oramaapiconsumer.instrumented.BaseInstrumentedTesting;
+import com.maximo.douglas.oramaapiconsumer.testutils.BaseInstrumentedTesting;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -25,7 +25,7 @@ public class NavigationTest extends BaseInstrumentedTesting {
     private static final int FIRST_ITEM_POSITION = 0;
 
     @Override
-    public void launchActivity() {
+    public void initSetup() {
         ActivityScenario.launch(MainActivity.class);
     }
 
@@ -53,7 +53,7 @@ public class NavigationTest extends BaseInstrumentedTesting {
                 FIRST_ITEM_POSITION, R.id.fund_card_view_item)
         ).perform(click());
 
-        onView(withId(R.id.fund_detail_toolbar_title)).check(matches(withText(FIRST_ITEM_SIMPLE_NAME)));
+        onView(withId(R.id.fund_detail_app_bar_title)).check(matches(withText(FIRST_ITEM_SIMPLE_NAME)));
     }
 
 }

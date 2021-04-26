@@ -1,8 +1,5 @@
 package com.maximo.douglas.oramaapiconsumer.instrumented;
 
-import com.maximo.douglas.oramaapiconsumer.instrumented.navigation.MainActivityTest;
-import com.maximo.douglas.oramaapiconsumer.instrumented.navigation.NavigationTest;
-
 import org.junit.runner.RunWith;
 import org.junit.runners.Suite;
 
