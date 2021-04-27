@@ -1,10 +1,11 @@
 package com.maximo.douglas.oramaapiconsumer.instrumented;
 
-import androidx.test.core.app.ActivityScenario;
+import androidx.fragment.app.testing.FragmentScenario;
+import androidx.lifecycle.Lifecycle.State;
 
-import com.maximo.douglas.oramaapiconsumer.MainActivity;
 import com.maximo.douglas.oramaapiconsumer.R;
 import com.maximo.douglas.oramaapiconsumer.testutils.BaseInstrumentedTesting;
+import com.maximo.douglas.oramaapiconsumer.ui.fundlisting.FundListingFragment;
 
 import org.junit.Test;
 
@@ -22,7 +23,20 @@ public class FundListingFragmentTest extends BaseInstrumentedTesting {
 
     @Override
     public void initSetup() {
-        ActivityScenario.launch(MainActivity.class);
+        launchFragmentView();
+    }
+
+    private void launchFragmentView() {
+        int themeResId = R.style.Theme_Oramaapiconsumer;
+        State initialState = State.RESUMED;
+
+        FragmentScenario.Companion.launchInContainer(
+                FundListingFragment.class,
+                null,
+                themeResId,
+                initialState,
+                null
+        );
     }
 
     @Test
