@@ -43,7 +43,7 @@ public class NavigationTest extends BaseInstrumentedTesting {
                 )
         ).perform(click());
 
-        onView(withId(R.id.fund_information_linear_layout)).check(matches(isDisplayed()));
+        onView(withId(R.id.fragment_fund_detail_body_linear_layout)).check(matches(isDisplayed()));
     }
 
     @Test

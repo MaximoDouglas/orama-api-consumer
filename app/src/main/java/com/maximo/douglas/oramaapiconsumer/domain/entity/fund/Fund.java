@@ -12,75 +12,75 @@ import java.util.Date;
 public class Fund implements Serializable {
     @SerializedName("id")
     @Expose
-    private Integer id;
+    protected Integer id;
 
     @SerializedName("fees")
     @Expose
-    private Fee fees;
+    protected Fee fees;
 
     @SerializedName("is_simple")
     @Expose
-    private Boolean isSimple;
+    protected Boolean isSimple;
 
     @SerializedName("operability")
     @Expose
-    private Operability operability;
+    protected Operability operability;
 
     @SerializedName("full_name")
     @Expose
-    private String fullName;
+    protected String fullName;
 
     @SerializedName("is_closed")
     @Expose
-    private Boolean isClosed;
+    protected Boolean isClosed;
 
     @SerializedName("simple_name")
     @Expose
-    private String simpleName;
+    protected String simpleName;
 
     @SerializedName("documents")
     @Expose
-    private ArrayList<Document> documents;
+    protected ArrayList<Document> documents;
 
     @SerializedName("specification")
     @Expose
-    private Specification specification;
+    protected Specification specification;
 
     @SerializedName("quota_date")
     @Expose
-    private Date quotaDate;
+    protected Date quotaDate;
 
     @SerializedName("tax_classification")
     @Expose
-    private String taxClassification;
+    protected String taxClassification;
 
     @SerializedName("description")
     @Expose
-    private Description description;
+    protected Description description;
 
     @SerializedName("is_active")
     @Expose
-    private Boolean isActive;
+    protected Boolean isActive;
 
     @SerializedName("fund_situation")
     @Expose
-    private FundSituation fundSituation;
+    protected FundSituation fundSituation;
 
     @SerializedName("volatility_12m")
     @Expose
-    private String volatility12m;
+    protected String volatility12m;
 
     @SerializedName("profitabilities")
     @Expose
-    private Profitabilities profitabilities;
+    protected Profitabilities profitabilities;
 
     @SerializedName("net_patrimony_12m")
     @Expose
-    private String netPatrimony12M;
+    protected String netPatrimony12M;
 
     @SerializedName("fund_manager")
     @Expose
-    private FundManager fundManager;
+    protected FundManager fundManager;
 
     public Fund(
             Boolean isSimple,
