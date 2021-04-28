@@ -44,6 +44,18 @@ public class Specification {
     @Expose
     private String isQualified;
 
+    public Specification(
+            String fundMainStrategyName,
+            FundSuitabilityProfile fundSuitabilityProfile,
+            String fundClass,
+            String fundClassAnbima
+    ) {
+        this.fundMainStrategyName = fundMainStrategyName;
+        this.fundSuitabilityProfile = fundSuitabilityProfile;
+        this.fundClass = fundClass;
+        this.fundClassAnbima = fundClassAnbima;
+    }
+
     public String getFundMainStrategyName() {
         return fundMainStrategyName;
     }

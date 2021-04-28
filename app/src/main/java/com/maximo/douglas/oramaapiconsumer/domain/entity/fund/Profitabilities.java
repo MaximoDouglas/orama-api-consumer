@@ -37,6 +37,26 @@ public class Profitabilities {
     @Expose
     private String day;
 
+    public Profitabilities(
+            String m60,
+            String m48,
+            String m24,
+            String m36,
+            String month,
+            String m12,
+            String year,
+            String day
+    ) {
+        this.m60 = m60;
+        this.m48 = m48;
+        this.m24 = m24;
+        this.m36 = m36;
+        this.month = month;
+        this.m12 = m12;
+        this.year = year;
+        this.day = day;
+    }
+
     public String getM60() {
         return m60;
     }

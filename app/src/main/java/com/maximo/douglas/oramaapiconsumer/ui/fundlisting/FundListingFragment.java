@@ -33,8 +33,6 @@ public class FundListingFragment extends Fragment implements OnFundClickListener
 
     private List<Fund> fundList = new ArrayList<>();
 
-    private Bundle fragmentState;
-
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         mBinding = DataBindingUtil.inflate(inflater, R.layout.fragment_fund_listing, container, false);
@@ -44,6 +42,8 @@ public class FundListingFragment extends Fragment implements OnFundClickListener
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
+
+
         setupRecyclerView();
         setupViewModel();
     }

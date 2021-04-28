@@ -32,11 +32,6 @@ public class FundDetailFragment extends Fragment {
     }
 
     @Override
-    public void onActivityCreated(@Nullable Bundle savedInstanceState) {
-        super.onActivityCreated(savedInstanceState);
-    }
-
-    @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         setupViewModel();
@@ -72,8 +67,8 @@ public class FundDetailFragment extends Fragment {
 
     private void handleFundDetailStateChange(Fund fund) {
         mBinding.setFund(fund);
-        mBinding.fundProfitability.setProfitabilities(fund.getProfitabilities());
-        mBinding.fundSpecification.setSpecification(fund.getSpecification());
+        mBinding.fragmentFundDetailProfitability.setProfitabilities(fund.getProfitabilities());
+        mBinding.fragmentFundDetailSpecification.setSpecification(fund.getSpecification());
     }
 
 }
