@@ -1,6 +1,6 @@
 package com.maximo.douglas.oramaapiconsumer.instrumented;
 
-import com.maximo.douglas.oramaapiconsumer.instrumented.funddetailfragment.FundDetailFragmentTestContext;
+import com.maximo.douglas.oramaapiconsumer.instrumented.funddetailfragment.FundDetailFragmentValuesTest;
 
 import org.junit.runner.RunWith;
 import org.junit.runners.Suite;
@@ -11,7 +11,7 @@ import org.junit.runners.Suite;
                 NavigationTest.class,
                 MainActivityTest.class,
                 FundListingFragmentTest.class,
-                FundDetailFragmentTestContext.class
+                FundDetailFragmentValuesTest.class
         }
 )
 public class InstrumentedSuiteTest {

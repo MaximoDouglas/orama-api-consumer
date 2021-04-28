@@ -16,24 +16,24 @@ import static androidx.test.espresso.Espresso.onView;
 import static androidx.test.espresso.action.ViewActions.scrollTo;
 import static androidx.test.espresso.matcher.ViewMatchers.withId;
 import static com.maximo.douglas.oramaapiconsumer.testutils.FileUtils.getJsonFromFilePath;
-import static com.maximo.douglas.oramaapiconsumer.testutils.ThreadUtils.waitViewToComplete;
 
 public abstract class BaseInstrumentedTesting {
 
-    public abstract void initSetup();
+    public abstract void initSetup() throws IOException;
 
     private final MockWebServer mockWebServer = new MockWebServer();
+    private boolean isMockWebServerRunning = false;
 
     @Before
     public void setup() throws IOException {
-        startMockWebServer();
         initSetup();
-        waitViewToComplete();
     }
 
     @After
     public void tearDown() throws IOException {
-        stopMockWebServer();
+        if (isMockWebServerRunning) {
+            stopMockWebServer();
+        }
     }
 
     protected void startMockWebServer() throws IOException {
@@ -57,14 +57,16 @@ public abstract class BaseInstrumentedTesting {
 
         mockWebServer.setDispatcher(dispatcher);
         mockWebServer.start(8500);
+        isMockWebServerRunning = true;
     }
 
     protected void stopMockWebServer() throws IOException {
         mockWebServer.close();
+        isMockWebServerRunning = false;
     }
 
-    protected void scrollToView(int fund_detail_fragment_objective_text_view) {
-        onView(withId(fund_detail_fragment_objective_text_view)).perform(scrollTo());
+    protected void scrollToView(int viewIdToScrollTo) {
+        onView(withId(viewIdToScrollTo)).perform(scrollTo());
     }
 
 }

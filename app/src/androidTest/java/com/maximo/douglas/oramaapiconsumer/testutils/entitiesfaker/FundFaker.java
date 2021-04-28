@@ -1,4 +1,4 @@
-package com.maximo.douglas.oramaapiconsumer.instrumented.fakedomainentities;
+package com.maximo.douglas.oramaapiconsumer.testutils.entitiesfaker;
 
 import com.maximo.douglas.oramaapiconsumer.domain.entity.fund.Description;
 import com.maximo.douglas.oramaapiconsumer.domain.entity.fund.Fund;

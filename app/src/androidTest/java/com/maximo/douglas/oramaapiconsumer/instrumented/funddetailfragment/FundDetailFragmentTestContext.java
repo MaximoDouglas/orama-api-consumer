@@ -7,8 +7,8 @@ import androidx.lifecycle.Lifecycle;
 
 import com.maximo.douglas.oramaapiconsumer.R;
 import com.maximo.douglas.oramaapiconsumer.domain.entity.fund.Fund;
-import com.maximo.douglas.oramaapiconsumer.instrumented.fakedomainentities.FundFaker;
 import com.maximo.douglas.oramaapiconsumer.testutils.BaseInstrumentedTesting;
+import com.maximo.douglas.oramaapiconsumer.testutils.entitiesfaker.FundFaker;
 import com.maximo.douglas.oramaapiconsumer.ui.funddetail.FundDetailFragment;
 
 public class FundDetailFragmentTestContext extends BaseInstrumentedTesting {
@@ -31,13 +31,29 @@ public class FundDetailFragmentTestContext extends BaseInstrumentedTesting {
     protected static final String EXPECTED_VOLATILITY_12_M = "18.14%";
 
     protected static final String M60 = null;
+    protected static final String EXPECTED_M60 = "0.00%";
+
     protected static final String M48 = null;
+    protected static final String EXPECTED_M48 = "0.00%";
+
     protected static final String M24 = "0.571826";
+    protected static final String EXPECTED_M24 = "57.18%";
+
     protected static final String M36 = null;
+    protected static final String EXPECTED_M36 = "0.00%";
+
     protected static final String MONTH = "-0.023477";
+    protected static final String EXPECTED_MONTH = "-2.35%";
+
     protected static final String M12 = "0.247703";
+    protected static final String EXPECTED_M12 = "24.77%";
+
     protected static final String YEAR = "0.060386";
+    protected static final String EXPECTED_YEAR = "6.04%";
+
     protected static final String DAY = "-0.005200";
+    protected static final String EXPECTED_DAY = "-0.52%";
+
 
     protected static final String FUND_CLASS_ANBIMA = "Fundos que podem investir mais " +
             "de 40% do seu patrimônio líquido em ativos financeiros no exterior.";

@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
+
         <variable
             name="profitabilities"
             type="com.maximo.douglas.oramaapiconsumer.domain.entity.fund.Profitabilities" />
@@ -14,6 +15,7 @@
         android:orientation="vertical">
 
         <LinearLayout
+            android:id="@+id/fund_profitabilities_day_linear_layout"
             visibleOrGone="@{profitabilities.day != null}"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -22,6 +24,7 @@
             android:orientation="horizontal">
 
             <TextView
+                android:id="@+id/fund_profitabilities_day_label_text_view"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/fund_profitability_today_label"
@@ -30,6 +33,7 @@
                 android:textStyle="bold" />
 
             <TextView
+                android:id="@+id/fund_profitabilities_day_text_view"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="6dp"
@@ -41,6 +45,7 @@
         </LinearLayout>
 
         <LinearLayout
+            android:id="@+id/fund_profitabilities_month_linear_layout"
             visibleOrGone="@{profitabilities.month != null}"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -49,6 +54,7 @@
             android:orientation="horizontal">
 
             <TextView
+                android:id="@+id/fund_profitabilities_month_label_text_view"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/fund_profitability_this_month_label"
@@ -57,6 +63,7 @@
                 android:textStyle="bold" />
 
             <TextView
+                android:id="@+id/fund_profitabilities_month_text_view"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="6dp"
@@ -67,6 +74,7 @@
         </LinearLayout>
 
         <LinearLayout
+            android:id="@+id/fund_profitabilities_year_linear_layout"
             visibleOrGone="@{profitabilities.year != null}"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -75,6 +83,7 @@
             android:orientation="horizontal">
 
             <TextView
+                android:id="@+id/fund_profitabilities_year_label_text_view"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/fund_profitability_this_year_label"
@@ -83,6 +92,7 @@
                 android:textStyle="bold" />
 
             <TextView
+                android:id="@+id/fund_profitabilities_year_text_view"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="6dp"
@@ -93,6 +103,7 @@
         </LinearLayout>
 
         <LinearLayout
+            android:id="@+id/fund_profitabilities_m12_linear_layout"
             visibleOrGone="@{profitabilities.formattedM12 != null}"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -101,6 +112,7 @@
             android:orientation="horizontal">
 
             <TextView
+                android:id="@+id/fund_profitabilities_m12_label_text_view"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/fund_profitability_last_twelve_months_label"
@@ -109,6 +121,7 @@
                 android:textStyle="bold" />
 
             <TextView
+                android:id="@+id/fund_profitabilities_m12_text_view"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="6dp"
@@ -119,6 +132,7 @@
         </LinearLayout>
 
         <LinearLayout
+            android:id="@+id/fund_profitabilities_m24_linear_layout"
             visibleOrGone="@{profitabilities.formattedM24 != null}"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -127,6 +141,7 @@
             android:orientation="horizontal">
 
             <TextView
+                android:id="@+id/fund_profitabilities_m24_label_text_view"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/fund_profitability_last_two_years_label"
@@ -135,6 +150,7 @@
                 android:textStyle="bold" />
 
             <TextView
+                android:id="@+id/fund_profitabilities_m24_text_view"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="6dp"
@@ -145,6 +161,7 @@
         </LinearLayout>
 
         <LinearLayout
+            android:id="@+id/fund_profitabilities_m36_linear_layout"
             visibleOrGone="@{profitabilities.formattedM36 != null}"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -153,6 +170,7 @@
             android:orientation="horizontal">
 
             <TextView
+                android:id="@+id/fund_profitabilities_m36_label_text_view"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/fund_profitability_last_three_years_label"
@@ -161,6 +179,7 @@
                 android:textStyle="bold" />
 
             <TextView
+                android:id="@+id/fund_profitabilities_m36_text_view"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="6dp"
@@ -171,6 +190,7 @@
         </LinearLayout>
 
         <LinearLayout
+            android:id="@+id/fund_profitabilities_m48_linear_layout"
             visibleOrGone="@{profitabilities.formattedM48 != null}"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -179,6 +199,7 @@
             android:orientation="horizontal">
 
             <TextView
+                android:id="@+id/fund_profitabilities_m48_label_text_view"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/fund_profitability_last_four_years_label"
@@ -187,6 +208,7 @@
                 android:textStyle="bold" />
 
             <TextView
+                android:id="@+id/fund_profitabilities_m48_text_view"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="6dp"
@@ -197,6 +219,7 @@
         </LinearLayout>
 
         <LinearLayout
+            android:id="@+id/fund_profitabilities_m60_linear_layout"
             visibleOrGone="@{profitabilities.formattedM60 != null}"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -205,6 +228,7 @@
             android:orientation="horizontal">
 
             <TextView
+                android:id="@+id/fund_profitabilities_m60_label_text_view"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/fund_profitability_last_five_years_label"
@@ -213,6 +237,7 @@
                 android:textStyle="bold" />
 
             <TextView
+                android:id="@+id/fund_profitabilities_m60_text_view"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="6dp"

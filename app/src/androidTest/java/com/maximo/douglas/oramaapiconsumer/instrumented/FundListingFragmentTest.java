@@ -9,6 +9,8 @@ import com.maximo.douglas.oramaapiconsumer.ui.fundlisting.FundListingFragment;
 
 import org.junit.Test;
 
+import java.io.IOException;
+
 import static androidx.test.espresso.Espresso.onView;
 import static androidx.test.espresso.assertion.ViewAssertions.matches;
 import static androidx.test.espresso.matcher.ViewMatchers.isDisplayed;
@@ -22,7 +24,8 @@ public class FundListingFragmentTest extends BaseInstrumentedTesting {
     private static final int FIRST_ITEM_POSITION = 0;
 
     @Override
-    public void initSetup() {
+    public void initSetup() throws IOException {
+        startMockWebServer();
         launchFragmentView();
     }
 

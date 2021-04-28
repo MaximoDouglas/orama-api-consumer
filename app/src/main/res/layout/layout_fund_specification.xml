@@ -15,6 +15,7 @@
         android:orientation="vertical">
 
         <LinearLayout
+            android:id="@+id/fund_specification_main_strategy_name_linear_layout"
             visibleOrGone="@{specification.fundMainStrategyName != null}"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -23,6 +24,7 @@
             android:orientation="horizontal">
 
             <TextView
+                android:id="@+id/fund_specification_main_strategy_label_text_view"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/fund_main_strategy"
@@ -31,6 +33,7 @@
                 android:textStyle="bold" />
 
             <TextView
+                android:id="@+id/fund_specification_main_strategy_text_view"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="12dp"
@@ -42,6 +45,7 @@
         </LinearLayout>
 
         <LinearLayout
+            android:id="@+id/fund_specification_suitability_profile_linear_layout"
             visibleOrGone="@{specification.fundSuitabilityProfile != null}"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -50,6 +54,7 @@
             android:orientation="horizontal">
 
             <TextView
+                android:id="@+id/fund_specification_suitability_profile_label_text_view"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/fund_suitable_profile"
@@ -58,7 +63,7 @@
                 android:textStyle="bold" />
 
             <TextView
-                android:id="@+id/fund_specification_suitability_profile_name"
+                android:id="@+id/fund_specification_suitability_profile_text_view"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="10dp"
@@ -69,6 +74,7 @@
         </LinearLayout>
 
         <LinearLayout
+            android:id="@+id/fund_specification_class_linear_layout"
             visibleOrGone="@{specification.fundClass != null}"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -77,6 +83,7 @@
             android:orientation="horizontal">
 
             <TextView
+                android:id="@+id/fund_specification_class_label_text_view"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/fund_class"
@@ -85,7 +92,7 @@
                 android:textStyle="bold" />
 
             <TextView
-                android:id="@+id/fund_specification_fund_class"
+                android:id="@+id/fund_specification_class_text_view"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="10dp"
@@ -96,6 +103,7 @@
         </LinearLayout>
 
         <LinearLayout
+            android:id="@+id/fund_specification_class_anbima_linear_layout"
             visibleOrGone="@{specification.fundClassAnbima != null}"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -104,6 +112,7 @@
             android:orientation="horizontal">
 
             <TextView
+                android:id="@+id/fund_specification_class_anbima_label_text_view"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/fund_class_anbima"
@@ -112,6 +121,7 @@
                 android:textStyle="bold" />
 
             <TextView
+                android:id="@+id/fund_specification_class_anbima_text_view"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="10dp"
