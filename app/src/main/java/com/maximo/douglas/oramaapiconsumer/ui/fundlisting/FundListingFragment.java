@@ -42,6 +42,8 @@ public class FundListingFragment extends Fragment implements OnFundClickListener
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
+
+
         setupRecyclerView();
         setupViewModel();
     }

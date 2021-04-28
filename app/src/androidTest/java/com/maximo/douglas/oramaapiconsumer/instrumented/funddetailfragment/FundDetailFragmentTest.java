@@ -10,7 +10,7 @@ import static androidx.test.espresso.matcher.ViewMatchers.isDisplayed;
 import static androidx.test.espresso.matcher.ViewMatchers.withId;
 import static androidx.test.espresso.matcher.ViewMatchers.withText;
 
-public class FundDetailFragmentValuesTest extends FundDetailFragmentTestContext {
+public class FundDetailFragmentTest extends FundDetailFragmentTestContext {
 
     @Test
     public void fragment_fund_detail_container_is_correct() {
