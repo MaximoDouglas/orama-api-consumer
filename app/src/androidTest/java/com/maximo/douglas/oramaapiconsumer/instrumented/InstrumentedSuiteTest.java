@@ -1,5 +1,7 @@
 package com.maximo.douglas.oramaapiconsumer.instrumented;
 
+import com.maximo.douglas.oramaapiconsumer.instrumented.funddetailfragment.FundDetailFragmentTest;
+
 import org.junit.runner.RunWith;
 import org.junit.runners.Suite;
 

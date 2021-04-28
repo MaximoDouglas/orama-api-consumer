@@ -10,6 +10,8 @@ import com.maximo.douglas.oramaapiconsumer.testutils.BaseInstrumentedTesting;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
+import java.io.IOException;
+
 import static androidx.test.espresso.Espresso.onView;
 import static androidx.test.espresso.assertion.ViewAssertions.matches;
 import static androidx.test.espresso.matcher.ViewMatchers.isDisplayed;
@@ -19,7 +21,8 @@ import static androidx.test.espresso.matcher.ViewMatchers.withId;
 public class MainActivityTest extends BaseInstrumentedTesting {
 
     @Override
-    public void initSetup() {
+    public void initSetup() throws IOException {
+        startMockWebServer();
         ActivityScenario.launch(MainActivity.class);
     }
 

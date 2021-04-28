@@ -12,26 +12,29 @@ import okhttp3.mockwebserver.MockResponse;
 import okhttp3.mockwebserver.MockWebServer;
 import okhttp3.mockwebserver.RecordedRequest;
 
+import static androidx.test.espresso.Espresso.onView;
+import static androidx.test.espresso.action.ViewActions.scrollTo;
+import static androidx.test.espresso.matcher.ViewMatchers.withId;
 import static com.maximo.douglas.oramaapiconsumer.testutils.FileUtils.getJsonFromFilePath;
-import static com.maximo.douglas.oramaapiconsumer.testutils.ThreadUtils.waitViewToComplete;
 
 public abstract class BaseInstrumentedTesting {
 
+    public abstract void initSetup() throws IOException;
+
+    private final MockWebServer mockWebServer = new MockWebServer();
+    private boolean isMockWebServerRunning = false;
+
     @Before
     public void setup() throws IOException {
-        startMockWebServer();
         initSetup();
-        waitViewToComplete();
     }
 
     @After
     public void tearDown() throws IOException {
-        stopMockWebServer();
+        if (isMockWebServerRunning) {
+            stopMockWebServer();
+        }
     }
-
-    public abstract void initSetup();
-
-    private final MockWebServer mockWebServer = new MockWebServer();
 
     protected void startMockWebServer() throws IOException {
         final String endpointToFunds = "/json/fund_detail_full.json?serializer=fund_detail_full";
@@ -54,10 +57,16 @@ public abstract class BaseInstrumentedTesting {
 
         mockWebServer.setDispatcher(dispatcher);
         mockWebServer.start(8500);
+        isMockWebServerRunning = true;
     }
 
     protected void stopMockWebServer() throws IOException {
         mockWebServer.close();
+        isMockWebServerRunning = false;
+    }
+
+    protected void scrollToView(int viewIdToScrollTo) {
+        onView(withId(viewIdToScrollTo)).perform(scrollTo());
     }
 
 }

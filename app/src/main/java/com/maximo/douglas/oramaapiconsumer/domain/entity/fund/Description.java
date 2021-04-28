@@ -26,6 +26,10 @@ public class Description implements Serializable {
     @Expose
     private String strategy;
 
+    public Description(String objective) {
+        this.objective = objective;
+    }
+
     public String getObjective() {
         return objective;
     }
