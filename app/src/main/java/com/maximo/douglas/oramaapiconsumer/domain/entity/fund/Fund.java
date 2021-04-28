@@ -82,6 +82,26 @@ public class Fund implements Serializable {
     @Expose
     private FundManager fundManager;
 
+    public Fund(
+            Boolean isSimple,
+            Operability operability,
+            String simpleName,
+            Specification specification,
+            Description description,
+            String volatility12m,
+            Profitabilities profitabilities,
+            FundManager fundManager
+    ) {
+        this.isSimple = isSimple;
+        this.operability = operability;
+        this.simpleName = simpleName;
+        this.specification = specification;
+        this.description = description;
+        this.volatility12m = volatility12m;
+        this.profitabilities = profitabilities;
+        this.fundManager = fundManager;
+    }
+
     public Integer getId() {
         return id;
     }

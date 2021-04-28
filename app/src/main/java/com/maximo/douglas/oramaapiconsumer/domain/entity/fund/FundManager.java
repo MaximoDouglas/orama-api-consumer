@@ -28,6 +28,11 @@ public class FundManager {
     @Expose
     private String name;
 
+    public FundManager(String description, String name) {
+        this.description = description;
+        this.name = name;
+    }
+
     public Integer getId() {
         return id;
     }

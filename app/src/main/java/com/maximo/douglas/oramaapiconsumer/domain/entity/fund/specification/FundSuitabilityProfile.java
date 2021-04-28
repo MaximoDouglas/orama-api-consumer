@@ -12,6 +12,10 @@ public class FundSuitabilityProfile {
     @Expose
     private String name;
 
+    public FundSuitabilityProfile(String name) {
+        this.name = name;
+    }
+
     public Integer getScoreRangeOrder() {
         return scoreRangeOrder;
     }

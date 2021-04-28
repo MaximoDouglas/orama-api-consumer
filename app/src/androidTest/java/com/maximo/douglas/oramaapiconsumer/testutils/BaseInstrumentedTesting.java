@@ -12,10 +12,17 @@ import okhttp3.mockwebserver.MockResponse;
 import okhttp3.mockwebserver.MockWebServer;
 import okhttp3.mockwebserver.RecordedRequest;
 
+import static androidx.test.espresso.Espresso.onView;
+import static androidx.test.espresso.action.ViewActions.scrollTo;
+import static androidx.test.espresso.matcher.ViewMatchers.withId;
 import static com.maximo.douglas.oramaapiconsumer.testutils.FileUtils.getJsonFromFilePath;
 import static com.maximo.douglas.oramaapiconsumer.testutils.ThreadUtils.waitViewToComplete;
 
 public abstract class BaseInstrumentedTesting {
+
+    public abstract void initSetup();
+
+    private final MockWebServer mockWebServer = new MockWebServer();
 
     @Before
     public void setup() throws IOException {
@@ -28,10 +35,6 @@ public abstract class BaseInstrumentedTesting {
     public void tearDown() throws IOException {
         stopMockWebServer();
     }
-
-    public abstract void initSetup();
-
-    private final MockWebServer mockWebServer = new MockWebServer();
 
     protected void startMockWebServer() throws IOException {
         final String endpointToFunds = "/json/fund_detail_full.json?serializer=fund_detail_full";
@@ -58,6 +61,10 @@ public abstract class BaseInstrumentedTesting {
 
     protected void stopMockWebServer() throws IOException {
         mockWebServer.close();
+    }
+
+    protected void scrollToView(int fund_detail_fragment_objective_text_view) {
+        onView(withId(fund_detail_fragment_objective_text_view)).perform(scrollTo());
     }
 
 }
