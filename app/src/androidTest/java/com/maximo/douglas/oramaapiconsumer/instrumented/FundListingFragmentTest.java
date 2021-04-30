@@ -23,8 +23,8 @@ public class FundListingFragmentTest extends BaseInstrumentedTesting {
 
     private static final int FIRST_ITEM_POSITION = 0;
     private static final String FIRST_ITEM_SIMPLE_NAME = "PIMCO Income Dólar FIC FIM IE";
-    private static final String EXPECTED_VOLATILITY_12_M = "18.14% (12m)";
-    private static final String EXPECTED_MINIMUM_APPLICATION_AMOUNT = "R$ 5000.00";
+    private static final String EXPECTED_VOLATILITY_12_M = "18.14%";
+    private static final String EXPECTED_MINIMUM_APPLICATION_AMOUNT = "5000.00";
 
     @Override
     public void initSetup() throws IOException {
@@ -73,18 +73,33 @@ public class FundListingFragmentTest extends BaseInstrumentedTesting {
     }
 
     @Test
-    public void test_if_first_recyclerview_item_volatility_12m_is_set_correctly() {
+    public void test_if_first_recyclerview_item_volatility_value_is_set_correctly() {
         onView(
                 withRecyclerView(R.id.fund_listing_recycler_view)
-                        .atPositionOnView(FIRST_ITEM_POSITION, R.id.fund_cardview_data_right_half_volatility_12m_text_view)
+                        .atPositionOnView(FIRST_ITEM_POSITION, R.id.fund_cardview_data_right_half_volatility_value_text_view)
         ).check(matches(withText(EXPECTED_VOLATILITY_12_M)));
+    }
+
+    @Test
+    public void test_if_first_recyclerview_item_volatility_12m_label_is_set_correctly() {
+        onView(
+                withRecyclerView(R.id.fund_listing_recycler_view)
+                        .atPositionOnView(FIRST_ITEM_POSITION, R.id.fund_cardview_data_right_half_volatility_12m_label_text_view)
+        ).check(matches(withText(R.string.fund_volatility_12_month_time_mark)));
     }
 
     @Test
     public void test_if_first_recyclerview_item_minimum_application_label_is_set_correctly() {
         onView(withRecyclerView(R.id.fund_listing_recycler_view)
-                        .atPositionOnView(FIRST_ITEM_POSITION, R.id.fund_cardview_data_right_half_minimum_application_amount_label_text_view)
+                .atPositionOnView(FIRST_ITEM_POSITION, R.id.fund_cardview_data_right_half_minimum_application_amount_label_text_view)
         ).check(matches(withText(R.string.minimum_initial_application_amount)));
+    }
+
+    @Test
+    public void test_if_first_recyclerview_item_minimum_application_rs_is_set_correctly() {
+        onView(withRecyclerView(R.id.fund_listing_recycler_view)
+                .atPositionOnView(FIRST_ITEM_POSITION, R.id.fund_cardview_data_right_half_minimum_application_rs_text_view)
+        ).check(matches(withText(R.string.fund_cardview_data_right_half_minimum_application_monetary_sign)));
     }
 
     @Test

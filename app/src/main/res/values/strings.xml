@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">orama-api-consumer</string>
     <string name="minimum_initial_application_amount">Aplicação Mínima</string>
-    <string name="fund_volatility_12_month_label">(12m)</string>
+    <string name="fund_volatility_12_month_time_mark">(12m)</string>
     <string name="fund_profitability_label">Rentabilidade</string>
     <string name="fund_volatility_12_months">Volatilidade em 12 meses:</string>
     <string name="fund_simplicity_yes">Sim</string>
@@ -23,5 +23,6 @@
     <string name="fund_profitability_last_four_years_label">Últimos 4 anos:</string>
     <string name="fund_profitability_last_five_years_label">Últimos 5 anos:</string>
     <string name="fund_listing_toolbar_title">Fundos</string>
+    <string name="fund_cardview_data_right_half_minimum_application_monetary_sign">R$</string>
 
 </resources>
