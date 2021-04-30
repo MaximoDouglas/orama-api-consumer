@@ -24,5 +24,7 @@
     <string name="fund_profitability_last_five_years_label">Últimos 5 anos:</string>
     <string name="fund_listing_toolbar_title">Fundos</string>
     <string name="fund_cardview_data_right_half_minimum_application_monetary_sign">R$</string>
+    <string name="fragment_fund_detail_minimum_initial_application_monetary_unity">R$</string>
+    <string name="fragment_fund_detail_about_the_manager_label">Sobre a administradora</string>
 
 </resources>

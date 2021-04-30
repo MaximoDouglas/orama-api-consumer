@@ -281,11 +281,19 @@ public class FundDetailFragmentTest extends FundDetailFragmentTestContext {
     }
 
     @Test
+    public void fragment_fund_detail_minimum_initial_application_monetary_unit_text_view_is_correct() {
+        onView(withId(R.id.fragment_fund_detail_minimum_initial_application_rs_text_view)).check(matches(isDisplayed()));
+
+        onView(withId(R.id.fragment_fund_detail_minimum_initial_application_rs_text_view))
+                .check(matches(withText(R.string.fragment_fund_detail_minimum_initial_application_monetary_unity)));
+    }
+
+    @Test
     public void fragment_fund_detail_minimum_initial_application_amount_text_view_is_correct() {
         onView(withId(R.id.fragment_fund_detail_minimum_initial_application_amount_text_view)).check(matches(isDisplayed()));
 
         onView(withId(R.id.fragment_fund_detail_minimum_initial_application_amount_text_view))
-                .check(matches(withText(EXPECTED_MINMIMUM_INITIAL_APPLICATION_AMOUNT)));
+                .check(matches(withText(MINMIMUM_INITIAL_APPLICATION_AMOUNT)));
     }
 
     @Test
@@ -419,12 +427,21 @@ public class FundDetailFragmentTest extends FundDetailFragmentTestContext {
     }
 
     @Test
-    public void fragment_fund_detail_manager_name_label_text_view_is_correct() {
+    public void fragment_fund_detail_about_the_manager_label_text_view_is_correct() {
+        scrollToView(R.id.fragment_fund_detail_about_the_manager_label_text_view);
+
+        onView(withId(R.id.fragment_fund_detail_about_the_manager_label_text_view)).check(matches(isDisplayed()));
+        onView(withId(R.id.fragment_fund_detail_about_the_manager_label_text_view))
+                .check(matches(withText(R.string.fragment_fund_detail_about_the_manager_label)));
+    }
+
+    @Test
+    public void fragment_fund_detail_manager_name_text_view_is_correct() {
         scrollToView(R.id.fragment_fund_detail_manager_name_label_text_view);
 
         onView(withId(R.id.fragment_fund_detail_manager_name_label_text_view)).check(matches(isDisplayed()));
         onView(withId(R.id.fragment_fund_detail_manager_name_label_text_view))
-                .check(matches(withText(EXPECTED_MANAGER_NAME_LABEL)));
+                .check(matches(withText(MANAGER_NAME)));
     }
 
     @Test

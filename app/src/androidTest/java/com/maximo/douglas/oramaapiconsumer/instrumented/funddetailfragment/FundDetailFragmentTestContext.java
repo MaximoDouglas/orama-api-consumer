@@ -19,7 +19,6 @@ public class FundDetailFragmentTestContext extends BaseInstrumentedTesting {
     protected static final String EXPECTED_IS_SIMPLE = "Não";
 
     protected static final String MINMIMUM_INITIAL_APPLICATION_AMOUNT = "5000.00";
-    protected static final String EXPECTED_MINMIMUM_INITIAL_APPLICATION_AMOUNT = "R$ 5000.00";
 
     protected static final String MAIN_STRATEGY_NAME = "Renda Fixa Global";
 
@@ -70,7 +69,6 @@ public class FundDetailFragmentTestContext extends BaseInstrumentedTesting {
             "sujeita às\r\nrestrições descritas no presente Regulamento.";
 
     protected static final String MANAGER_NAME = "PIMCO";
-    protected static final String EXPECTED_MANAGER_NAME_LABEL = "Sobre a administradora PIMCO";
 
     protected static final String MANAGER_DESCRIPTION = "Fundada em 1971, a PIMCO é formada por " +
             "mais de 2.000 profissionais dedicados, em 12 países, compartilhando a mesma missão: " +
