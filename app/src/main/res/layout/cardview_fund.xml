@@ -72,14 +72,29 @@
                     android:orientation="vertical"
                     android:padding="8dp">
 
-                    <TextView
-                        android:id="@+id/fund_cardview_data_right_half_volatility_12m_text_view"
+                    <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginStart="20dp"
-                        android:text='@{fund.formattedVolatility12m + " (12m)"}'
-                        android:textColor="?attr/colorPrimaryDark"
-                        tools:text="18.35% (12m)" />
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/fund_cardview_data_right_half_volatility_value_text_view"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="20dp"
+                            android:text="@{fund.formattedVolatility12m}"
+                            android:textColor="?attr/colorPrimaryDark"
+                            tools:text="18.35%" />
+
+                        <TextView
+                            android:id="@+id/fund_cardview_data_right_half_volatility_12m_label_text_view"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="6dp"
+                            android:text="@string/fund_volatility_12_month_label"
+                            android:textColor="?attr/colorPrimaryDark" />
+
+                    </LinearLayout>
 
                     <TextView
                         android:id="@+id/fund_cardview_data_right_half_minimum_application_amount_label_text_view"

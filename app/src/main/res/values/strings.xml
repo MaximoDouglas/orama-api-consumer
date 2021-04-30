@@ -1,8 +1,7 @@
 <resources>
     <string name="app_name">orama-api-consumer</string>
-    <string name="tab_text_1">Tab 1</string>
-    <string name="tab_text_2">Tab 2</string>
     <string name="minimum_initial_application_amount">Aplicação Mínima</string>
+    <string name="fund_volatility_12_month_label">(12m)</string>
     <string name="fund_profitability_label">Rentabilidade</string>
     <string name="fund_volatility_12_months">Volatilidade em 12 meses:</string>
     <string name="fund_simplicity_yes">Sim</string>
