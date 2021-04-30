@@ -142,15 +142,30 @@
                         android:textSize="16sp"
                         android:textStyle="bold" />
 
-                    <TextView
-                        android:id="@+id/fragment_fund_detail_minimum_initial_application_amount_text_view"
+                    <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginStart="6dp"
-                        android:text='@{"R$ " + fund.operability.minimumInitialApplicationAmount}'
-                        android:textColor="@color/gray_700"
-                        android:textSize="14sp"
-                        tools:text="-0.001257" />
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/fragment_fund_detail_minimum_initial_application_rs_text_view"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="6dp"
+                            android:text="@string/fragment_fund_detail_minimum_initial_application_monetary_unity"
+                            android:textColor="@color/gray_700"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:id="@+id/fragment_fund_detail_minimum_initial_application_amount_text_view"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="6dp"
+                            android:text="@{fund.operability.minimumInitialApplicationAmount}"
+                            android:textColor="@color/gray_700"
+                            android:textSize="14sp"
+                            tools:text="5000,00" />
+                    </LinearLayout>
                 </LinearLayout>
 
                 <TextView
@@ -205,16 +220,34 @@
                     android:layout_marginTop="10dp"
                     android:orientation="vertical">
 
-                    <TextView
-                        android:id="@+id/fragment_fund_detail_manager_name_label_text_view"
+                    <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
-                        android:text='@{"Sobre a administradora " + fund.fundManager.name}'
-                        android:textColor="@color/teal_500"
-                        android:textSize="16sp"
-                        android:textStyle="bold"
-                        tools:text="Sobre a administradora PIMCO" />
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/fragment_fund_detail_about_the_manager_label_text_view"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/fragment_fund_detail_about_the_manager_label"
+                            android:textColor="@color/teal_500"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
+                            tools:text="Sobre a administradora" />
+
+                        <TextView
+                            android:id="@+id/fragment_fund_detail_manager_name_label_text_view"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="6dp"
+                            android:text="@{fund.fundManager.name}"
+                            android:textColor="@color/teal_500"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
+                            tools:text="PIMCO" />
+
+                    </LinearLayout>
 
                     <TextView
                         android:id="@+id/fragment_fund_detail_manager_description_text_view"
