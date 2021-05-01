@@ -1,4 +1,4 @@
-package com.maximo.douglas.oramaapiconsumer.service.fundservice;
+package com.maximo.douglas.oramaapiconsumer.domain.repository.fund;
 
 import com.maximo.douglas.oramaapiconsumer.domain.entity.fund.Fund;
 

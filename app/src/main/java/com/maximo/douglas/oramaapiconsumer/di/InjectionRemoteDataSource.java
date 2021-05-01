@@ -11,7 +11,7 @@ public class InjectionRemoteDataSource {
     public static FundRemoteDataSource provideFundRemoteDataSource() {
         final FundApiDataSource fundApiDataSource = provideFundApiDataSource();
 
-        return FundRemoteDataSourceImpl.getInstance(fundApiDataSource);
+        return new FundRemoteDataSourceImpl(fundApiDataSource);
     }
 
 }

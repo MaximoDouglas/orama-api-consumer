@@ -16,6 +16,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.maximo.douglas.oramaapiconsumer.R;
 import com.maximo.douglas.oramaapiconsumer.databinding.FragmentFundListingBinding;
 import com.maximo.douglas.oramaapiconsumer.domain.entity.fund.Fund;
+import com.maximo.douglas.oramaapiconsumer.domain.repository.fund.FundRepositoryImpl;
 import com.maximo.douglas.oramaapiconsumer.ui.fundlisting.adapter.FundListingAdapter;
 import com.maximo.douglas.oramaapiconsumer.ui.fundlisting.adapter.OnFundClickListener;
 
@@ -23,6 +24,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import static androidx.navigation.Navigation.findNavController;
+import static com.maximo.douglas.oramaapiconsumer.di.InjectionRemoteDataSource.provideFundRemoteDataSource;
 
 public class FundListingFragment extends Fragment implements OnFundClickListener {
 
@@ -43,7 +45,6 @@ public class FundListingFragment extends Fragment implements OnFundClickListener
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-
         setupRecyclerView();
         setupViewModel();
     }
@@ -59,7 +60,11 @@ public class FundListingFragment extends Fragment implements OnFundClickListener
 
     private void setupViewModel() {
         if (fundListingViewModel == null) {
-            fundListingViewModel = new ViewModelProvider(this).get(FundListingViewModel.class);
+            fundListingViewModel = new ViewModelProvider(this,
+                    new FundListingViewModel.ViewModelFactory(
+                            new FundRepositoryImpl(provideFundRemoteDataSource())
+                    )
+            ).get(FundListingViewModel.class);
         }
 
         fundListingViewModel.getFundListLiveData().observe(getViewLifecycleOwner(), this::handleFundListStateChange);
@@ -68,8 +73,10 @@ public class FundListingFragment extends Fragment implements OnFundClickListener
     private void handleFundListStateChange(List<Fund> fundList) {
         this.fundList = fundList;
         mBinding.contentLoadingProgressBar.hide();
+
         fundListingAdapter.setData(this.fundList);
         fundListingAdapter.notifyDataSetChanged();
+
         mBinding.executePendingBindings();
     }
 
