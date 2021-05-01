@@ -40,18 +40,22 @@ public class FundListingFragment extends Fragment implements OnFundClickListener
     private final FundListingAdapter fundListingAdapter = new FundListingAdapter(this);
     private List<Fund> fundList = new ArrayList<>();
 
+    public static FundListingFragment newInstance() {
+        return new FundListingFragment();
+    }
+
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         mBinding = DataBindingUtil.inflate(inflater, R.layout.fragment_fund_listing, container, false);
         return mBinding.getRoot();
     }
 
-//    @Override
-//    public void onAttach(@NonNull Context context) {
-//        super.onAttach(context);
-//
-//        ((MainActivity) requireActivity()).getMainComponent().inject(this);
-//    }
+    @Override
+    public void onAttach(@NonNull Context context) {
+        super.onAttach(context);
+
+        ((MainActivity) requireActivity()).getMainComponent().inject(this);
+    }
 
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {

@@ -24,4 +24,5 @@ public class MainActivity extends AppCompatActivity {
     public MainComponent getMainComponent() {
         return mainComponent;
     }
+
 }

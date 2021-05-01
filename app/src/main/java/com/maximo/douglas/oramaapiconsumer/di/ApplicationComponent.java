@@ -9,7 +9,6 @@ import javax.inject.Singleton;
 
 import dagger.BindsInstance;
 import dagger.Component;
-import dagger.Module;
 
 @Singleton
 @Component(modules = {
@@ -27,8 +26,4 @@ public interface ApplicationComponent {
 
     MainComponent.Factory mainComponent();
 
-}
-
-@Module(subcomponents = {MainComponent.class})
-class SubComponentsModule {
 }
