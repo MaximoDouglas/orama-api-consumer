@@ -1,10 +1,8 @@
 package com.maximo.douglas.oramaapiconsumer.ui.fundlisting;
 
-import androidx.annotation.NonNull;
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
-import androidx.lifecycle.ViewModelProvider;
 
 import com.maximo.douglas.oramaapiconsumer.domain.entity.fund.Fund;
 import com.maximo.douglas.oramaapiconsumer.domain.repository.fund.FundRepository;
@@ -12,10 +10,13 @@ import com.maximo.douglas.oramaapiconsumer.domain.repository.fund.GetFundListCal
 
 import java.util.List;
 
+import javax.inject.Inject;
+
 public class FundListingViewModel extends ViewModel {
 
     private final FundRepository fundRepository;
 
+    @Inject
     public FundListingViewModel(FundRepository fundRepository) {
         this.fundRepository = fundRepository;
     }
@@ -41,19 +42,19 @@ public class FundListingViewModel extends ViewModel {
         });
     }
 
-    static class ViewModelFactory implements ViewModelProvider.Factory {
-
-        private final FundRepository fundRepository;
-
-        public ViewModelFactory(FundRepository fundRepository) {
-            this.fundRepository = fundRepository;
-        }
-
-        @NonNull
-        @Override
-        public <T extends ViewModel> T create(@NonNull Class<T> modelClass) {
-            return (T) new FundListingViewModel(fundRepository);
-        }
-    }
+//    static class ViewModelFactory implements ViewModelProvider.Factory {
+//
+//        private final FundRepository fundRepository;
+//
+//        public ViewModelFactory(FundRepository fundRepository) {
+//            this.fundRepository = fundRepository;
+//        }
+//
+//        @NonNull
+//        @Override
+//        public <T extends ViewModel> T create(@NonNull Class<T> modelClass) {
+//            return (T) new FundListingViewModel(fundRepository);
+//        }
+//    }
 
 }

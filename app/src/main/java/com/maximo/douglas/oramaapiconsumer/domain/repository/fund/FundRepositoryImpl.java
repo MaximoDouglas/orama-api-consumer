@@ -7,6 +7,8 @@ import org.jetbrains.annotations.NotNull;
 
 import java.util.List;
 
+import javax.inject.Inject;
+
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -15,6 +17,7 @@ public class FundRepositoryImpl implements FundRepository {
 
     private final FundRemoteDataSource fundRemoteDataSource;
 
+    @Inject
     public FundRepositoryImpl(FundRemoteDataSource fundRemoteDataSource) {
         this.fundRemoteDataSource = fundRemoteDataSource;
     }
