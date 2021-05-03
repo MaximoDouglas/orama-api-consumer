@@ -1,4 +1,4 @@
-name: Publish Bintray
+name: Publish Release
 on:
   push:
     tags:
