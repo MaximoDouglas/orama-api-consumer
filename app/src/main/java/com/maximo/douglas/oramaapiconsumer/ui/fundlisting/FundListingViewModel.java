@@ -5,15 +5,21 @@ import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
 import com.maximo.douglas.oramaapiconsumer.domain.entity.fund.Fund;
-import com.maximo.douglas.oramaapiconsumer.service.fundservice.FundRemoteDataSource;
-import com.maximo.douglas.oramaapiconsumer.service.fundservice.GetFundListCallBack;
-import com.maximo.douglas.oramaapiconsumer.di.InjectionRemoteDataSource;
+import com.maximo.douglas.oramaapiconsumer.domain.repository.fund.FundRepository;
+import com.maximo.douglas.oramaapiconsumer.domain.repository.fund.GetFundListCallBack;
 
 import java.util.List;
 
+import javax.inject.Inject;
+
 public class FundListingViewModel extends ViewModel {
 
-    private final FundRemoteDataSource fundRemoteDataSource = InjectionRemoteDataSource.provideFundRemoteDataSource();
+    private final FundRepository fundRepository;
+
+    @Inject
+    public FundListingViewModel(FundRepository fundRepository) {
+        this.fundRepository = fundRepository;
+    }
 
     private final MutableLiveData<List<Fund>> mMutableFundList = new MutableLiveData<>();
     private final LiveData<List<Fund>> mFundList = mMutableFundList;
@@ -23,7 +29,7 @@ public class FundListingViewModel extends ViewModel {
     }
 
     public void requestFundList() {
-        fundRemoteDataSource.getFundApiList(new GetFundListCallBack() {
+        fundRepository.getFundList(new GetFundListCallBack() {
             @Override
             public void getFundListSuccess(List<Fund> fundList) {
                 mMutableFundList.setValue(fundList);
@@ -35,5 +41,20 @@ public class FundListingViewModel extends ViewModel {
             }
         });
     }
+
+//    static class ViewModelFactory implements ViewModelProvider.Factory {
+//
+//        private final FundRepository fundRepository;
+//
+//        public ViewModelFactory(FundRepository fundRepository) {
+//            this.fundRepository = fundRepository;
+//        }
+//
+//        @NonNull
+//        @Override
+//        public <T extends ViewModel> T create(@NonNull Class<T> modelClass) {
+//            return (T) new FundListingViewModel(fundRepository);
+//        }
+//    }
 
 }

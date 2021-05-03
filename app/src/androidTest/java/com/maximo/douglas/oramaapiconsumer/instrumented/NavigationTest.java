@@ -3,7 +3,7 @@ package com.maximo.douglas.oramaapiconsumer.instrumented;
 import androidx.test.core.app.ActivityScenario;
 import androidx.test.internal.runner.junit4.AndroidJUnit4ClassRunner;
 
-import com.maximo.douglas.oramaapiconsumer.MainActivity;
+import com.maximo.douglas.oramaapiconsumer.ui.MainActivity;
 import com.maximo.douglas.oramaapiconsumer.R;
 import com.maximo.douglas.oramaapiconsumer.testutils.BaseInstrumentedTesting;
 
