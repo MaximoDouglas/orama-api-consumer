@@ -19,7 +19,4 @@ public class FundDetailViewModel extends ViewModel {
         mMutableFundDetail.setValue(fund);
     }
 
-    public Fund getFundDetail() {
-        return mFundDetail.getValue();
-    }
 }

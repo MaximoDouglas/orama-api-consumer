@@ -1,12 +1,13 @@
 package com.maximo.douglas.oramaapiconsumer.instrumented;
 
-import androidx.fragment.app.testing.FragmentScenario;
-import androidx.lifecycle.Lifecycle.State;
+import androidx.test.rule.ActivityTestRule;
 
 import com.maximo.douglas.oramaapiconsumer.R;
 import com.maximo.douglas.oramaapiconsumer.testutils.BaseInstrumentedTesting;
+import com.maximo.douglas.oramaapiconsumer.testutils.FakeActivity;
 import com.maximo.douglas.oramaapiconsumer.ui.fundlisting.FundListingFragment;
 
+import org.junit.Rule;
 import org.junit.Test;
 
 import java.io.IOException;
@@ -26,24 +27,18 @@ public class FundListingFragmentTest extends BaseInstrumentedTesting {
     private static final String EXPECTED_VOLATILITY_12_M = "18.14%";
     private static final String EXPECTED_MINIMUM_APPLICATION_AMOUNT = "5000.00";
 
+    @Rule
+    public ActivityTestRule<FakeActivity> activityRule = new ActivityTestRule<>(FakeActivity.class);
+
     @Override
     public void initSetup() throws IOException {
         startMockWebServer();
-        launchFragmentView();
+        launchFragmentIntoActivity();
         waitViewToComplete();
     }
 
-    private void launchFragmentView() {
-        int themeResId = R.style.Theme_Oramaapiconsumer;
-        State initialState = State.RESUMED;
-
-        FragmentScenario.Companion.launchInContainer(
-                FundListingFragment.class,
-                null,
-                themeResId,
-                initialState,
-                null
-        );
+    private void launchFragmentIntoActivity() {
+        activityRule.getActivity().replaceFragment(FundListingFragment.newInstance());
     }
 
     @Test
