@@ -9,8 +9,8 @@ For Instrumented Tests it is necessary to run with the mockedEnvironment Build V
 
 ## Launching a new version
 In this project I added github actions to take care of the CI/CD of the project. The actions are triggered when:
-- **There is a new PR ponted to develop** -> run tests and generates a APK for testing of the new version
-- **There is a new PR ponted to main** -> run tests and generates a APK for testing of the new version
+- **There is a new PR pointed to develop** -> run tests and generates a APK for testing of the new version
+- **There is a new PR pointed to main** -> run tests and generates a APK for testing of the new version
 - **A new tag is pushed to the origin** -> deploys a new release
 
 ## The teck stack
