@@ -34,6 +34,7 @@ public class FundDetailFragment extends Fragment {
         mBinding.setShowProfitabilities(false);
         mBinding.setShowSpecification(false);
         mBinding.setShowObjective(false);
+        mBinding.setShowManagerData(false);
 
         return mBinding.getRoot();
     }
@@ -89,6 +90,9 @@ public class FundDetailFragment extends Fragment {
                 break;
             case R.id.fragment_fund_detail_objective_head_line:
                 mBinding.setShowObjective(!isVisible);
+                break;
+            case R.id.fragment_fund_detail_manager_head_line:
+                mBinding.setShowManagerData(!isVisible);
                 break;
         }
     }
