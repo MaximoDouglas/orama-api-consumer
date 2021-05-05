@@ -1,4 +1,4 @@
-package com.maximo.douglas.oramaapiconsumer.instrumented;
+package com.maximo.douglas.oramaapiconsumer.instrumented.navigation;
 
 import androidx.test.core.app.ActivityScenario;
 import androidx.test.internal.runner.junit4.AndroidJUnit4ClassRunner;
