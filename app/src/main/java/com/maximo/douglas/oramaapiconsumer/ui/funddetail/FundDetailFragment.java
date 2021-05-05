@@ -1,5 +1,6 @@
 package com.maximo.douglas.oramaapiconsumer.ui.funddetail;
 
+import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -31,6 +32,7 @@ public class FundDetailFragment extends Fragment {
 
         mBinding.setFragment(this);
         mBinding.setShowProfitabilities(false);
+        mBinding.setShowSpecification(false);
 
         return mBinding.getRoot();
     }
@@ -75,10 +77,15 @@ public class FundDetailFragment extends Fragment {
         mBinding.fragmentFundDetailSpecification.setSpecification(fund.getSpecification());
     }
 
+    @SuppressLint("NonConstantResourceId")
     public void changeVisibility(View view, Boolean isVisible) {
         switch (view.getId()) {
             case R.id.fragment_fund_detail_profitabilities_head_line:
                 mBinding.setShowProfitabilities(!isVisible);
+                break;
+            case R.id.fragment_fund_detail_specification_head_line:
+                mBinding.setShowSpecification(!isVisible);
+                break;
         }
     }
 

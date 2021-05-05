@@ -15,6 +15,10 @@
         <variable
             name="showProfitabilities"
             type="Boolean" />
+
+        <variable
+            name="showSpecification"
+            type="Boolean" />
     </data>
 
     <LinearLayout
@@ -203,19 +207,46 @@
                     </LinearLayout>
                 </LinearLayout>
 
-                <TextView
-                    android:id="@+id/fragment_fund_detail_specification_label_text_view"
-                    android:layout_width="wrap_content"
+                <LinearLayout
+                    android:id="@+id/fragment_fund_detail_specification_head_line"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-                    android:text="@string/fund_specification"
-                    android:textColor="@color/teal_500"
-                    android:textSize="16sp"
-                    android:textStyle="bold" />
+                    android:layout_marginTop="20dp"
+                    android:onClick="@{(v) -> fragment.changeVisibility(v, showSpecification)}">
+
+                    <TextView
+                        android:id="@+id/fragment_fund_detail_specification_label_text_view"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="@string/fund_specification"
+                        android:textColor="@color/teal_500"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        visibleOrGone="@{showSpecification}"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="12dp"
+                        android:src="@drawable/ic_arrow_right" />
+
+                    <ImageView
+                        visibleOrGone="@{!showSpecification}"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="12dp"
+                        android:src="@drawable/ic_arrow_drop_down"
+                        tools:visibility="gone" />
+
+                </LinearLayout>
 
                 <include
                     android:id="@+id/fragment_fund_detail_specification"
-                    layout="@layout/layout_fund_specification" />
+                    layout="@layout/layout_fund_specification"
+                    visibleOrGone="@{showSpecification}" />
 
                 <LinearLayout
                     android:id="@+id/fragment_fund_detail_description_linear_layout"
@@ -270,17 +301,6 @@
                             android:textSize="16sp"
                             android:textStyle="bold"
                             tools:text="Sobre a administradora" />
-
-                        <TextView
-                            android:id="@+id/fragment_fund_detail_manager_name_label_text_view"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginStart="6dp"
-                            android:text="@{fund.fundManager.name}"
-                            android:textColor="@color/teal_500"
-                            android:textSize="16sp"
-                            android:textStyle="bold"
-                            tools:text="PIMCO" />
 
                     </LinearLayout>
 
