@@ -7,6 +7,14 @@
         <variable
             name="fund"
             type="com.maximo.douglas.oramaapiconsumer.domain.entity.fund.Fund" />
+
+        <variable
+            name="fragment"
+            type="com.maximo.douglas.oramaapiconsumer.ui.funddetail.FundDetailFragment" />
+
+        <variable
+            name="showProfitabilities"
+            type="Boolean" />
     </data>
 
     <LinearLayout
@@ -59,19 +67,46 @@
                     android:background="@color/gray_500"
                     android:padding="1dp" />
 
-                <TextView
-                    android:id="@+id/fragment_fund_detail_profitability_label_text_view"
-                    android:layout_width="wrap_content"
+                <LinearLayout
+                    android:id="@+id/fragment_fund_detail_profitabilities_head_line"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="20dp"
-                    android:text="@string/fund_profitability_label"
-                    android:textColor="@color/teal_500"
-                    android:textSize="16sp"
-                    android:textStyle="bold" />
+                    android:onClick="@{(v) -> fragment.changeVisibility(v, showProfitabilities)}">
+
+                    <TextView
+                        android:id="@+id/fragment_fund_detail_profitability_label_text_view"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="@string/fund_profitability_label"
+                        android:textColor="@color/teal_500"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        visibleOrGone="@{showProfitabilities}"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="12dp"
+                        android:src="@drawable/ic_arrow_right" />
+
+                    <ImageView
+                        visibleOrGone="@{!showProfitabilities}"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="12dp"
+                        android:src="@drawable/ic_arrow_drop_down"
+                        tools:visibility="gone" />
+
+                </LinearLayout>
 
                 <include
                     android:id="@+id/fragment_fund_detail_profitability"
-                    layout="@layout/layout_fund_profitabilities" />
+                    layout="@layout/layout_fund_profitabilities"
+                    visibleOrGone="@{showProfitabilities}" />
 
                 <LinearLayout
                     android:id="@+id/fragment_fund_detail_volatility_12_months_linear_layout"

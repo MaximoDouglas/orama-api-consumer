@@ -28,6 +28,10 @@ public class FundDetailFragment extends Fragment {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         mBinding = DataBindingUtil.inflate(inflater, R.layout.fragment_fund_detail, container, false);
+
+        mBinding.setFragment(this);
+        mBinding.setShowProfitabilities(false);
+
         return mBinding.getRoot();
     }
 
@@ -69,6 +73,13 @@ public class FundDetailFragment extends Fragment {
         mBinding.setFund(fund);
         mBinding.fragmentFundDetailProfitability.setProfitabilities(fund.getProfitabilities());
         mBinding.fragmentFundDetailSpecification.setSpecification(fund.getSpecification());
+    }
+
+    public void changeVisibility(View view, Boolean isVisible) {
+        switch (view.getId()) {
+            case R.id.fragment_fund_detail_profitabilities_head_line:
+                mBinding.setShowProfitabilities(!isVisible);
+        }
     }
 
 }
