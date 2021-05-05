@@ -1,5 +1,6 @@
 package com.maximo.douglas.oramaapiconsumer.ui.funddetail;
 
+import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -28,6 +29,13 @@ public class FundDetailFragment extends Fragment {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         mBinding = DataBindingUtil.inflate(inflater, R.layout.fragment_fund_detail, container, false);
+
+        mBinding.setFragment(this);
+        mBinding.setShowProfitabilities(false);
+        mBinding.setShowSpecification(false);
+        mBinding.setShowObjective(false);
+        mBinding.setShowManagerData(false);
+
         return mBinding.getRoot();
     }
 
@@ -69,6 +77,24 @@ public class FundDetailFragment extends Fragment {
         mBinding.setFund(fund);
         mBinding.fragmentFundDetailProfitability.setProfitabilities(fund.getProfitabilities());
         mBinding.fragmentFundDetailSpecification.setSpecification(fund.getSpecification());
+    }
+
+    @SuppressLint("NonConstantResourceId")
+    public void changeVisibility(View view, Boolean isVisible) {
+        switch (view.getId()) {
+            case R.id.fragment_fund_detail_profitabilities_head_line:
+                mBinding.setShowProfitabilities(!isVisible);
+                break;
+            case R.id.fragment_fund_detail_specification_head_line:
+                mBinding.setShowSpecification(!isVisible);
+                break;
+            case R.id.fragment_fund_detail_objective_head_line:
+                mBinding.setShowObjective(!isVisible);
+                break;
+            case R.id.fragment_fund_detail_manager_head_line:
+                mBinding.setShowManagerData(!isVisible);
+                break;
+        }
     }
 
 }
