@@ -1,4 +1,4 @@
-package com.maximo.douglas.oramaapiconsumer.instrumented;
+package com.maximo.douglas.oramaapiconsumer.instrumented.fundlistingfragment;
 
 import androidx.test.rule.ActivityTestRule;
 
